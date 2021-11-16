@@ -20,10 +20,6 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 - Copy Photon Pun App ID into the Photon server settings
 - Update project material to URP shaders as they may appear magenta 
 
-# Making Holons
--- new URP instructions coming...
-Get in touch at mafj.inkibit@rootinteractive.com to ask for old ones and we'll send you a link
-
 # Testing multiplayer setup
 You will need to connect your Quest at this point.
 
@@ -49,5 +45,8 @@ You will need to connect your Quest at this point.
 - The cloned cubes will be static whilst the original has gravity
 - Pressing the exit button on side takes you briefly to lobby and back againi
 
+# Making Holons
+- new URP instructions coming...
+Get in touch at mafj.inkibit@rootinteractive.com to ask for old ones and we'll send you a link
 
 
