@@ -20,6 +20,10 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 - Copy Photon Pun App ID into the Photon server settings
 - Update project material to URP shaders as they may appear magenta 
 
+# Making Holons
+-- new URP instructions coming...
+Get in touch at mafj.inkibit@rootinteractive.com to ask for old ones and we'll send you a link
+
 # Testing multiplayer setup
 You will need to connect your Quest at this point.
 
