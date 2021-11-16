@@ -36,12 +36,14 @@ You will need to connect your Quest at this point.
 - Hit Play - you should see the scene. 
 
 ### Things to test
-- Connecting… shows up on screen
+- Inkibit Connecting… shows up on screen
 - Demo scene loads up with a table and cube on it
 - You can see your hands
 - You can move around using joystick on left controller
 - You can rotate with joystick on right controller
-- You can grab the cube from table and clone using right trigger while grabbing
+- You can grab the cube from table and clone using right controller trigger while grabbing
+- The cloned cubes will be static whilst the original has gravity
+- Pressing the exit button on side takes you briefly to lobby and back againi
 
 
 
