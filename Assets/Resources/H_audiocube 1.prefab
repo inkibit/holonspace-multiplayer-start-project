@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8492047629703926026}
   - component: {fileID: 2468418137590045414}
   - component: {fileID: 3545206177574193847}
-  - component: {fileID: 595381666323998291}
   - component: {fileID: 8801887447185257615}
   - component: {fileID: 2015758679890664522}
   - component: {fileID: 1312143424504039680}
@@ -147,19 +146,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 0
---- !u!114 &595381666323998291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271036707166037351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: 0
 --- !u!114 &8801887447185257615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,13 +311,13 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 1
   reliableMode: 0
   encrypt: 0
   transmitEnabled: 1
-  samplingRate: 24000
+  samplingRate: 48000
   frameDuration: 20000
   bitrate: 30000
   sourceType: 1
