@@ -12,20 +12,19 @@ using UnityEngine.Android;
 #endif
 
 public class MakeAudioLoopObject : MonoBehaviour
-    {
+{
+    //public float loudness;
+    //public float sensitivity;
+    public int loopDuration;
+    //public float minScale;
+    private string _SelectedDevice;
+    private string[] devices;
+    static float[] samplesData;
 
-        //public float loudness;
-        //public float sensitivity;
-        public int loopDuration;
-        //public float minScale;
-        private string _SelectedDevice;
-        private string[] devices;
-        static float[] samplesData;
-
-        public bool recording;
-        public bool generated;
-        private string filename;
-        private string filepath;
+    public bool recording;
+    public bool generated;
+    private string filename;
+    private string filepath;
     //private string packageName;
     //public Text pathtext;
     //public float x, y, z;
@@ -40,7 +39,6 @@ public class MakeAudioLoopObject : MonoBehaviour
 
     void Start()
     {
-        
         //sensitivity = 100;
         loopDuration = 4;
         //minScale = 0.5f;
@@ -51,10 +49,10 @@ public class MakeAudioLoopObject : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-        {
-            //loudness = GetAverageVolume() * sensitivity;
-            //loudness += loudness;
-        }
+    {
+        //loudness = GetAverageVolume() * sensitivity;
+        //loudness += loudness;
+    }
 
     /*float GetAverageVolume()
     {
@@ -69,12 +67,12 @@ public class MakeAudioLoopObject : MonoBehaviour
     }*/
 
     //public void JigglePrefab()
-        //{
+    //{
             //prefab.transform.localScale += new Vector3(loudness, loudness, loudness);
-        //}
+    //}
 
 
-IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenClip)
+    IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenClip)
     {
         AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
 
@@ -84,14 +82,12 @@ IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenCl
             filepath = Path.Combine("file://" + Application.persistentDataPath, filename + ".wav");
             Debug.Log (filepath);
             //pathtext.text = (File.Exists(filepath) ? "Android - File exists at" + filepath : "File does not exist at" + filepath);
-                    }
+        }
         else
         {
             filepath = Path.Combine(Application.persistentDataPath, filename + ".wav");
             //pathtext.text = (File.Exists(filepath) ? "PC - File exists at" + filepath : "File does not exist at" + filepath);
         }
-       
-
 
         UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(filepath, AudioType.WAV);
         yield return www.SendWebRequest();
@@ -113,19 +109,18 @@ IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenCl
     }
 
     public void StartRecording()
+    {
+        if (!generated)
         {
-            if (!generated)
-            {
-                AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
-                GetComponentInChildren<Renderer>().material.color = Color.blue;
-                recording = true;
-                audioS.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
-                while (!(Microphone.GetPosition(null) > 0)) { }
-                samplesData = new float[audioS.clip.samples * audioS.clip.channels];
-                audioS.clip.GetData(samplesData, 0);
-            }
-            
+            AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
+            GetComponentInChildren<Renderer>().material.color = Color.blue;
+            recording = true;
+            audioS.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
+            while (!(Microphone.GetPosition(null) > 0)) { }
+            samplesData = new float[audioS.clip.samples * audioS.clip.channels];
+            audioS.clip.GetData(samplesData, 0);
         }
+    }
 
     public void StopRecording()
     {
@@ -169,8 +164,5 @@ IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenCl
                 generated = true;
             }
         }
-
     }
-
 }
-
