@@ -17,7 +17,8 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 - Download Photon Voice 2 import into project https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518
 
 - Create a new Photon account Pun app in Photon Dashboard https://www.photonengine.com/
-- Copy Photon Pun App ID into the Photon server settings (PUN and Voice fields)
+- Copy Photon Pun App ID into the Photon server settings
+- Update project material to URP shaders as they may appear magenta 
 
 # Testing multiplayer setup
 You will need to connect your Quest at this point.
