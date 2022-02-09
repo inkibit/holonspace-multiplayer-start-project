@@ -7,11 +7,12 @@ using System.IO;
 using System;
 using Photon.Pun;
 using UnityEngine.Networking;
+using Photon.Voice.Unity;
 #if PLATFORM_ANDROID
 using UnityEngine.Android;
 #endif
 
-public class MakeAudioLoopObject : MonoBehaviour
+public class MakeAudioLoopObject : MonoBehaviourPun
 {
     //public float loudness;
     //public float sensitivity;
@@ -25,6 +26,7 @@ public class MakeAudioLoopObject : MonoBehaviour
     public bool generated;
     private string filename;
     private string filepath;
+    private Recorder photonRecorder;
     //private string packageName;
     //public Text pathtext;
     //public float x, y, z;
@@ -74,7 +76,7 @@ public class MakeAudioLoopObject : MonoBehaviour
 
     IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenClip)
     {
-        AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
+        AudioSource audioS = gameObject.GetComponent<AudioSource>();
 
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -99,12 +101,17 @@ public class MakeAudioLoopObject : MonoBehaviour
         else
         {
             //load the newly generated and saved clip using the www request 
-            audioS = gameObject.GetComponent<AudioSource>();
+            /*audioS = gameObject.GetComponent<AudioSource>();
             audioS.clip = DownloadHandlerAudioClip.GetContent(www);
             audioS.clip.name = filename;
             audioS.Play();
-            audioS.loop = true;
-            generated = true;
+            audioS.loop = true;*/
+            photonRecorder = GetComponent<Recorder>();
+            photonRecorder.AudioClip = DownloadHandlerAudioClip.GetContent(www);
+            photonRecorder.AudioClip.name = filename;
+            photonRecorder.StartRecording();
+            photonRecorder.LoopAudioClip = true;
+            photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
         }
     }
 
@@ -112,7 +119,7 @@ public class MakeAudioLoopObject : MonoBehaviour
     {
         if (!generated)
         {
-            AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
+            AudioSource audioS = gameObject.GetComponent<AudioSource>();
             GetComponentInChildren<Renderer>().material.color = Color.blue;
             recording = true;
             audioS.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
@@ -128,7 +135,7 @@ public class MakeAudioLoopObject : MonoBehaviour
         {
             GetComponentInChildren<Renderer>().material.color = Color.white;
             Debug.Log(filename);
-            AudioSource audioS = this.gameObject.GetComponent<AudioSource>();
+            AudioSource audioS = gameObject.GetComponent<AudioSource>();
 
             // Delete the file if it exists.
             if (File.Exists(filepath))
@@ -161,8 +168,14 @@ public class MakeAudioLoopObject : MonoBehaviour
             if (!generated && !recording)
             {
                 StartCoroutine(GenerateAudiObject(filepath, filename, audioS.clip));
-                generated = true;
+                photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
             }
         }
+    }
+
+    [PunRPC]
+    public void RPC_SetGenerated(bool b)
+    {
+        generated = b;
     }
 }
