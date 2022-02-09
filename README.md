@@ -17,15 +17,11 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 - Download Photon Voice 2 import into project https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518
 
 - Create a new Photon account Pun app in Photon Dashboard https://www.photonengine.com/
-- Copy Photon Pun App ID into the Photon server settings
-- Update project material to URP shaders as they may appear magenta 
+- Copy Photon Pun App ID into the Photon server settings (PUN and Voice fields)
 
 # Testing multiplayer setup
 You will need to connect your Quest at this point.
 
-- Build settings > Add scenes 
-- QuestPun2Template > Scenes > Photon2Lobby
-- QuestPun2Template > Scenes > Photon2Room
 - Save Unity Project (settings might not be saved otherwise)
 - RESTART UNITY (seems to make a difference when things seem weird)
 - Press Play on editor - you should see the test room after brief ‘connecting’ message
