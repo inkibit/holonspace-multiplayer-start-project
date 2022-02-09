@@ -31,6 +31,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     //private string packageName;
     //public Text pathtext;
     //public float x, y, z;
+    [SerializeField] int initialMicrophoneIndex;
 
     // Start is called before the first frame update
 
@@ -42,12 +43,16 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 
     void Start()
     {
+        var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+        initialMicrophoneIndex = recorder.PhotonMicrophoneDeviceId;
+
         //sensitivity = 100;
         loopDuration = 4;
         //minScale = 0.5f;
-        _SelectedDevice = Microphone.devices[0].ToString();
+        _SelectedDevice = Microphone.devices[initialMicrophoneIndex].ToString();
         //packageName = "com." + Application.companyName + "." + Application.productName;
         //Debug.Log(packageName);
+
     }
 
     // Update is called once per frame
@@ -156,13 +161,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
                 audioCreator = PhotonNetwork.LocalPlayer.ActorNumber;
             }
 
-            string[] devices = Microphone.devices;
-            if (devices.Length > 0)
-            {
-                var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
-                recorder.UnityMicrophoneDevice = devices[0];
-                recorder.TransmitEnabled = true;
-            }
+            var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+            recorder.UnityMicrophoneDevice = devices[initialMicrophoneIndex];
+            recorder.TransmitEnabled = true;
         }
     }
 
