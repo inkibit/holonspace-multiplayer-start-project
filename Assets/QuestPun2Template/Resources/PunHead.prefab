@@ -273,7 +273,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 200
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: -1
+  photonMicrophoneDeviceId: 1
   interestGroup: 0
   debugEchoMode: 0
   reliableMode: 0
@@ -370,7 +370,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.46
       inSlope: 0
       outSlope: 0
       tangentMode: 0
