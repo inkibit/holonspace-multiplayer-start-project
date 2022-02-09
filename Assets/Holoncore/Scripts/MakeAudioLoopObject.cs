@@ -9,6 +9,7 @@ using Photon.Pun;
 using UnityEngine.Networking;
 using Photon.Voice.Unity;
 using Networking.Pun2;
+using Photon.Voice.PUN;
 #if PLATFORM_ANDROID
 using UnityEngine.Android;
 #endif
@@ -53,6 +54,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
                 Debug.LogFormat("MicrophoneDebug: Microphone device={0}", device);
             }
         }
+        PhotonVoiceNetwork.Instance.InitRecorder(recorder);
 
         //sensitivity = 100;
         loopDuration = 4;
