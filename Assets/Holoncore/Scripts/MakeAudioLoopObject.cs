@@ -44,7 +44,15 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     void Start()
     {
         var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
-        initialMicrophoneIndex = recorder.PhotonMicrophoneDeviceId;
+        var enumerator = recorder.MicrophonesEnumerator;
+        if (enumerator.IsSupported)
+        {
+            Debug.LogFormat("MicrophoneDebug: Enumerating available microphone devices of type {0}", recorder.MicrophoneType);
+            foreach (var device in enumerator)
+            {
+                Debug.LogFormat("MicrophoneDebug: Microphone device={0}", device);
+            }
+        }
 
         //sensitivity = 100;
         loopDuration = 4;
@@ -107,6 +115,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
         {
             var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
             recorder.TransmitEnabled = false;
+            recorder.IsRecording = false;
 
             AudioSource audioS = gameObject.GetComponent<AudioSource>();
             GetComponentInChildren<Renderer>().material.color = Color.blue;
@@ -162,7 +171,16 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             }
 
             var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
-            recorder.UnityMicrophoneDevice = devices[initialMicrophoneIndex];
+            var enumerator = recorder.MicrophonesEnumerator;
+            if (enumerator.IsSupported)
+            {
+                foreach (var device in enumerator)
+                {
+                    recorder.MicrophoneDevice = device;
+                    break;
+                }
+            }
+            recorder.IsRecording = true;
             recorder.TransmitEnabled = true;
         }
     }
