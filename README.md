@@ -23,9 +23,6 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 # Testing multiplayer setup
 You will need to connect your Quest at this point.
 
-- Build settings > Add scenes 
-- QuestPun2Template > Scenes > Photon2Lobby
-- QuestPun2Template > Scenes > Photon2Room
 - Save Unity Project (settings might not be saved otherwise)
 - RESTART UNITY (seems to make a difference when things seem weird)
 - Press Play on editor - you should see the test room after brief ‘connecting’ message
