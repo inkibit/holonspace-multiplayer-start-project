@@ -8,6 +8,7 @@ using System;
 using Photon.Pun;
 using UnityEngine.Networking;
 using Photon.Voice.Unity;
+using Networking.Pun2;
 #if PLATFORM_ANDROID
 using UnityEngine.Android;
 #endif
@@ -150,6 +151,12 @@ public class MakeAudioLoopObject : MonoBehaviourPun
                 StartCoroutine(GenerateAudiObject(filepath, filename, audioS.clip));
                 photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
                 audioCreator = PhotonNetwork.LocalPlayer.ActorNumber;
+            }
+
+            string[] devices = Microphone.devices;
+            if (devices.Length > 0)
+            {
+                PersonalManager.instance.headPrefab.GetComponent<Recorder>().UnityMicrophoneDevice = devices[0];
             }
         }
     }

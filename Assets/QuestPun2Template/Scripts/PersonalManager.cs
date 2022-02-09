@@ -11,7 +11,7 @@ namespace Networking.Pun2
 {
     public class PersonalManager : MonoBehaviourPunCallbacks
     {
-        [SerializeField] GameObject headPrefab;
+        public GameObject headPrefab;
         [SerializeField] GameObject handRPrefab;
         [SerializeField] GameObject handLPrefab;
         [SerializeField] GameObject ovrCameraRig;
@@ -23,8 +23,12 @@ namespace Networking.Pun2
         int currentToolR;
         int currentToolL;
 
+        public static PersonalManager instance;
+
         private void Awake()
         {
+            instance = this;
+
             /// If the game starts in Room scene, and is not connected, sends the player back to Lobby scene to connect first.
             if (!PhotonNetwork.NetworkingClient.IsConnected)
             {
