@@ -152,7 +152,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             if (!generated && !recording)
             {
                 StartCoroutine(GenerateAudiObject(filepath, filename, audioS.clip));
-                photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
+                photonView.RPC("RPC_SetGenerated", RpcTarget.AllBuffered, true);
                 audioCreator = PhotonNetwork.LocalPlayer.ActorNumber;
             }
 
@@ -196,7 +196,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             photonRecorder.AudioClip.name = filename;
             photonRecorder.StartRecording();
             photonRecorder.LoopAudioClip = true;
-            photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
+            photonView.RPC("RPC_SetGenerated", RpcTarget.AllBuffered, true);
         }
     }
 
