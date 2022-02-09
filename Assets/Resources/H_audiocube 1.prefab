@@ -273,6 +273,7 @@ MonoBehaviour:
   loopDuration: 3
   recording: 0
   generated: 0
+  initialMicrophoneIndex: 0
 --- !u!114 &1284372596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: -1
+  photonMicrophoneDeviceId: 0
   interestGroup: 0
   debugEchoMode: 1
   reliableMode: 0
