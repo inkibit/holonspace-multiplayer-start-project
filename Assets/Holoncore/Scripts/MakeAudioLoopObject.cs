@@ -100,6 +100,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     {
         if (!generated)
         {
+            var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+            recorder.TransmitEnabled = false;
+
             AudioSource audioS = gameObject.GetComponent<AudioSource>();
             GetComponentInChildren<Renderer>().material.color = Color.blue;
             recording = true;
@@ -125,7 +128,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             }
             try
             {
-                Microphone.End(_SelectedDevice);
+                //Microphone.End(_SelectedDevice);
                 recording = false;
                 if (!recording && !generated)
                 {
@@ -156,7 +159,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             string[] devices = Microphone.devices;
             if (devices.Length > 0)
             {
-                PersonalManager.instance.headPrefab.GetComponent<Recorder>().UnityMicrophoneDevice = devices[0];
+                var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+                recorder.UnityMicrophoneDevice = devices[0];
+                recorder.TransmitEnabled = true;
             }
         }
     }
