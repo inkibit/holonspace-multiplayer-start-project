@@ -21,11 +21,11 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     private string _SelectedDevice;
     private string[] devices;
     static float[] samplesData;
-
     public bool recording;
     public bool generated;
     private string filename;
     private string filepath;
+    private int audioCreator;
     private Recorder photonRecorder;
     //private string packageName;
     //public Text pathtext;
@@ -91,28 +91,8 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             //pathtext.text = (File.Exists(filepath) ? "PC - File exists at" + filepath : "File does not exist at" + filepath);
         }
 
-        UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(filepath, AudioType.WAV);
-        yield return www.SendWebRequest();
-
-        if (www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.error);
-        }
-        else
-        {
-            //load the newly generated and saved clip using the www request 
-            /*audioS = gameObject.GetComponent<AudioSource>();
-            audioS.clip = DownloadHandlerAudioClip.GetContent(www);
-            audioS.clip.name = filename;
-            audioS.Play();
-            audioS.loop = true;*/
-            photonRecorder = GetComponent<Recorder>();
-            photonRecorder.AudioClip = DownloadHandlerAudioClip.GetContent(www);
-            photonRecorder.AudioClip.name = filename;
-            photonRecorder.StartRecording();
-            photonRecorder.LoopAudioClip = true;
-            photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
-        }
+        photonView.RPC("RPC_SetExistingAudioClip", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer.ActorNumber, filepath);
+        yield return null;
     }
 
     public void StartRecording()
@@ -169,10 +149,46 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             {
                 StartCoroutine(GenerateAudiObject(filepath, filename, audioS.clip));
                 photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
+                audioCreator = PhotonNetwork.LocalPlayer.ActorNumber;
             }
         }
     }
 
+    [PunRPC]
+    public void RPC_SetExistingAudioClip(int actorNum, string _filePath)
+    {
+        //Only set the audioclip if we created/own it (we have it local disk)
+        if(PhotonNetwork.LocalPlayer.ActorNumber == actorNum)
+        {
+            StartCoroutine(SetExistingAudioClip(actorNum, _filePath));
+        }
+        //We still store this data in everyone's instances
+        audioCreator = actorNum;
+        filepath = _filePath;
+    }
+
+    IEnumerator SetExistingAudioClip(int actorNum, string _filePath)
+    {
+        UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(_filePath, AudioType.WAV);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            //Set the created audioclip to the recorder component, which will handle transmiting audio over the network
+            photonRecorder = GetComponent<Recorder>();
+            photonRecorder.AudioClip = DownloadHandlerAudioClip.GetContent(www);
+            photonRecorder.AudioClip.name = filename;
+            photonRecorder.StartRecording();
+            photonRecorder.LoopAudioClip = true;
+            photonView.RPC("RPC_SetGenerated", RpcTarget.All, true);
+        }
+    }
+
+    //The generated boolean is set over an RPC, so once audio is recorded, other users can't override it
     [PunRPC]
     public void RPC_SetGenerated(bool b)
     {
