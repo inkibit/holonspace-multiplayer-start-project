@@ -58,7 +58,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        while (!recorder.IsInitialized)
+        if(!recorder.IsInitialized)
         {
             PhotonVoiceNetwork.Instance.InitRecorder(recorder);
         }
