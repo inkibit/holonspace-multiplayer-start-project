@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1WMHH820RN0395",
+    "m_SelectedDeviceId": "1WMHH811X00447",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH820RN0395",
+        "deviceId": "1WMHH811X00447",
         "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-        "processId": 15755,
+        "processId": 24185,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,7 +11,43 @@
         {
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 31337,
+            "processId": 18524,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 20227,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 22096,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 22775,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.oculus.shellenv",
+            "processId": 1916,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 23519,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 24185,
             "exited": false
         },
         {
