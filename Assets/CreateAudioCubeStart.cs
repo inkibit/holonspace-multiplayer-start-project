@@ -7,6 +7,9 @@ public class CreateAudioCubeStart : MonoBehaviour
 
     void Start()
     {
-        PhotonNetwork.Instantiate(audioCube.name, transform.position, transform.rotation);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.Instantiate(audioCube.name, transform.position, transform.rotation);
+        }
     }
 }
