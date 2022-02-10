@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1WMHH811X00447",
+    "m_SelectedDeviceId": "1WMHH820RN0395",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH811X00447",
+        "deviceId": "1WMHH820RN0395",
         "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-        "processId": 31337,
+        "processId": 15755,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,30 @@
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
             "processId": 31337,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 13889,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.oculus.os.vrusb",
+            "processId": 5932,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.oculus.shellenv",
+            "processId": 3592,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 15755,
             "exited": false
         }
     ],
