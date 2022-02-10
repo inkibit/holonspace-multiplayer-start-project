@@ -45,7 +45,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     void Start()
     {
         var recorder = GetComponent<Recorder>();
-        PhotonVoiceNetwork.Instance.InitRecorder(recorder);
+        recorder.Init(PersistentReferences.instance.voiceConnection);
 
         //sensitivity = 100;
         loopDuration = 4;
