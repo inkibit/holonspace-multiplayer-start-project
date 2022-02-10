@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1284372596}
   - component: {fileID: 1284372595}
   - component: {fileID: 5068765354594587210}
+  - component: {fileID: 470582608}
   m_Layer: 0
   m_Name: H_audiocube 1
   m_TagString: Untagged
@@ -312,7 +313,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 1
   reliableMode: 0
@@ -363,6 +364,18 @@ MonoBehaviour:
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 0
   SetupDebugSpeaker: 0
+--- !u!114 &470582608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271036707166037351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3165616014793349038
 GameObject:
   m_ObjectHideFlags: 0
