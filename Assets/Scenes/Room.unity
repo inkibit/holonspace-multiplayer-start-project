@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336813bb0754ab041b89aa0519a50954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioCube: {fileID: 1271036707166037351, guid: c8f9f3b0f233dce428bad0c39fb697bf, type: 3}
+  audioCube: {fileID: 5862389297205592183, guid: 3cce70a4dddb65b44ba1d1ed647c54e8, type: 3}
 --- !u!1 &2097842666
 GameObject:
   m_ObjectHideFlags: 0
