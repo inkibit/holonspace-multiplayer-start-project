@@ -13,10 +13,11 @@ namespace Networking.Pun2
 
     public class ClonePrefab : MonoBehaviourPun
     {
-        [SerializeField] enum Hand { Right, Left };
-        [SerializeField] Hand hand;
+        //[SerializeField] enum Hand { Right, Left };
+        //[SerializeField] Hand hand;
         private bool pressedLastFrame = false;
         private bool clonedLastFrame = false;
+
         private string myPrefabName;
         private Transform thisObjectTransform;
         [NonSerialized] public OVRGrabber grabber;

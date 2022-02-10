@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 1518879685640951871}
   - component: {fileID: 3198689617368757467}
   - component: {fileID: 6773883078978397703}
+  - component: {fileID: 1870385422}
   m_Layer: 6
   m_Name: H_cylinder
   m_TagString: Untagged
@@ -226,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: 0
 --- !u!114 &6773883078978397703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,3 +243,19 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &1870385422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856381025137866735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b825e473f126df04090ec832046dde3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loopDuration: 3
+  recording: 0
+  generated: 0
+  initialMicrophoneIndex: 0
