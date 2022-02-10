@@ -18,89 +18,51 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 {
     //public float loudness;
     //public float sensitivity;
+    public int loopDuration;
     //public float minScale;
     private string _SelectedDevice;
     private string[] devices;
     static float[] samplesData;
-    private bool recording;
-    private bool generated;
+    public bool recording;
+    public bool generated;
     private string filename;
     private string filepath;
     private int audioCreator;
     private Recorder photonRecorder;
-
-    [Tooltip("If non assigned, look for prefab in Resources folder")]
-    [SerializeField] private GameObject looperRecorder;
     //private string packageName;
     //public Text pathtext;
     //public float x, y, z;
+    [SerializeField] int initialMicrophoneIndex;
+
     // Start is called before the first frame update
-
-    private AudioSource audioSource;
-    private Recorder recorder;
-    private MeshRenderer meshRenderer;
-    private SkinnedMeshRenderer skinnedMeshRenderer;
-
-    [Header("AudioSettings")]
-    [SerializeField] int loopDuration;
-    [SerializeField] Color duringRecordingColor = StaticValues.ColorInkipink;
-    [SerializeField] Color postRecordingColor = Color.white;
-    private Color defaultColor;
-    [SerializeField] float minDistance = 0.5f;
-    [SerializeField] float maxDistance = 10f;
-    [SerializeField] float spatialBlend = 1f;
 
     private void Awake()
     {
         recording = false;
         generated = false;
-
-        if (GetComponentInChildren<MeshRenderer>())
-        {
-            meshRenderer = GetComponentInChildren<MeshRenderer>();
-            defaultColor = meshRenderer.material.color;
-        }
-        if(GetComponentInChildren<SkinnedMeshRenderer>())
-        {
-            skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-            defaultColor = skinnedMeshRenderer.material.color;
-        }
-        if (postRecordingColor == Color.white)
-        {
-            postRecordingColor = defaultColor;
-        }
     }
 
     void Start()
     {
+        var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+        var enumerator = recorder.MicrophonesEnumerator;
+        if (enumerator.IsSupported)
+        {
+            Debug.LogFormat("MicrophoneDebug: Enumerating available microphone devices of type {0}", recorder.MicrophoneType);
+            foreach (var device in enumerator)
+            {
+                Debug.LogFormat("MicrophoneDebug: Microphone device={0}", device);
+            }
+        }
+        PhotonVoiceNetwork.Instance.InitRecorder(recorder);
+
         //sensitivity = 100;
         loopDuration = 4;
         //minScale = 0.5f;
+        _SelectedDevice = Microphone.devices[initialMicrophoneIndex].ToString();
         //packageName = "com." + Application.companyName + "." + Application.productName;
         //Debug.Log(packageName);
-        InitializeAudioLooper();
-    }
 
-    //If we create this shell, instantiate the recorder child and set it as a child
-    private void InitializeAudioLooper()
-    {
-        if (photonView.IsMine)
-        {
-            var obj = PhotonNetwork.Instantiate(looperRecorder.name, transform.position, transform.rotation);
-            photonView.RPC("RPC_InitializeAudioLooper", RpcTarget.AllBuffered, obj.GetComponent<PhotonView>().ViewID);
-        }
-    }
-
-    [PunRPC]
-    public void RPC_InitializeAudioLooper(int photonViewID)
-    {
-        audioSource = PhotonView.Find(photonViewID).GetComponentInChildren<AudioSource>();
-        recorder = PhotonView.Find(photonViewID).GetComponentInChildren<Recorder>();
-
-        PhotonView.Find(photonViewID).transform.SetParent(transform);
-        audioSource.maxDistance = maxDistance;
-        audioSource.minDistance = minDistance;
-        audioSource.spatialBlend = spatialBlend;
     }
 
     // Update is called once per frame
@@ -130,6 +92,8 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 
     IEnumerator GenerateAudiObject(string filepath, string filename, AudioClip GenClip)
     {
+        AudioSource audioS = gameObject.GetComponent<AudioSource>();
+
         if (Application.platform == RuntimePlatform.Android)
         {
             
@@ -151,28 +115,17 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     {
         if (!generated)
         {
-            PersonalManager.instance.mainRecorder.TransmitEnabled = false;
-            PersonalManager.instance.mainRecorder.IsRecording = false;
-            photonView.RPC("RPC_SetColor", RpcTarget.All, duringRecordingColor.r, duringRecordingColor.g, duringRecordingColor.b, duringRecordingColor.a);
-            recording = true;
-            audioSource.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
-            while (!(Microphone.GetPosition(null) > 0)) { }
-            samplesData = new float[audioSource.clip.samples * audioSource.clip.channels];
-            audioSource.clip.GetData(samplesData, 0);
-        }
-    }
+            var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+            recorder.TransmitEnabled = false;
+            recorder.IsRecording = false;
 
-    [PunRPC]
-    public void RPC_SetColor(float r, float g, float b, float a)
-    {
-        Color color = new Color(r, g, b, a);
-        if (meshRenderer)
-        {
-            meshRenderer.material.color = color;
-        }
-        else if (skinnedMeshRenderer)
-        {
-            skinnedMeshRenderer.material.color = color;
+            AudioSource audioS = gameObject.GetComponent<AudioSource>();
+            GetComponentInChildren<Renderer>().material.color = Color.blue;
+            recording = true;
+            audioS.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
+            while (!(Microphone.GetPosition(null) > 0)) { }
+            samplesData = new float[audioS.clip.samples * audioS.clip.channels];
+            audioS.clip.GetData(samplesData, 0);
         }
     }
 
@@ -180,8 +133,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     {
         if (recording)
         {
-            photonView.RPC("RPC_SetColor", RpcTarget.All, postRecordingColor.r, postRecordingColor.g, postRecordingColor.b, postRecordingColor.a);
+            GetComponentInChildren<Renderer>().material.color = Color.white;
             Debug.Log(filename);
+            AudioSource audioS = gameObject.GetComponent<AudioSource>();
 
             // Delete the file if it exists.
             if (File.Exists(filepath))
@@ -194,10 +148,10 @@ public class MakeAudioLoopObject : MonoBehaviourPun
                 recording = false;
                 if (!recording && !generated)
                 {
-                    filename = (gameObject.name + "-" + photonView.ViewID);
+                    filename = (gameObject.name + "-" + GetComponent<PhotonView>().ViewID);
                     //filename = ("clip" + DateTime.Now.ToString("yyyymmdd--HH-mm-ss"));
                     filepath = Path.Combine(Application.persistentDataPath, filename + ".wav");
-                    SavWav.Save(filename, audioSource.clip);
+                    SavWav.Save(filename, audioS.clip);
                     Debug.Log("File Saved Successfully at: " + filepath);
                 }
 
@@ -213,11 +167,21 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 
             if (!generated && !recording)
             {
-                StartCoroutine(GenerateAudiObject(filepath, filename, audioSource.clip));
+                StartCoroutine(GenerateAudiObject(filepath, filename, audioS.clip));
                 photonView.RPC("RPC_SetGenerated", RpcTarget.AllBuffered, true);
                 audioCreator = PhotonNetwork.LocalPlayer.ActorNumber;
             }
 
+            var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
+            var enumerator = recorder.MicrophonesEnumerator;
+            if (enumerator.IsSupported)
+            {
+                foreach (var device in enumerator)
+                {
+                    recorder.MicrophoneDevice = device;
+                    break;
+                }
+            }
             recorder.IsRecording = true;
             recorder.TransmitEnabled = true;
         }
@@ -248,10 +212,11 @@ public class MakeAudioLoopObject : MonoBehaviourPun
         else
         {
             //Set the created audioclip to the recorder component, which will handle transmiting audio over the network
-            recorder.AudioClip = DownloadHandlerAudioClip.GetContent(www);
-            recorder.AudioClip.name = filename;
-            recorder.StartRecording();
-            recorder.LoopAudioClip = true;
+            photonRecorder = GetComponent<Recorder>();
+            photonRecorder.AudioClip = DownloadHandlerAudioClip.GetContent(www);
+            photonRecorder.AudioClip.name = filename;
+            photonRecorder.StartRecording();
+            photonRecorder.LoopAudioClip = true;
             photonView.RPC("RPC_SetGenerated", RpcTarget.AllBuffered, true);
         }
     }

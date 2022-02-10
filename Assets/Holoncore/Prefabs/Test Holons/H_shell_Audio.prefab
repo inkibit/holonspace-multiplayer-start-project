@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: 0
 --- !u!114 &5892981009651519999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,10 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b825e473f126df04090ec832046dde3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looperRecorder: {fileID: 1805554632151911644, guid: f2b529ed374d2234f8673cd568b0de64, type: 3}
   loopDuration: 3
-  duringRecordingColor: {r: 0.9019608, g: 0.13725491, b: 0.39215687, a: 255}
-  postRecordingColor: {r: 1, g: 1, b: 1, a: 1}
-  minDistance: 0.5
-  maxDistance: 10
-  spatialBlend: 1
+  recording: 0
+  generated: 0
