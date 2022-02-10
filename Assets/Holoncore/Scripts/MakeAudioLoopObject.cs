@@ -33,6 +33,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     //public Text pathtext;
     //public float x, y, z;
     [SerializeField] int initialMicrophoneIndex;
+    private Recorder recorder;
 
     // Start is called before the first frame update
 
@@ -44,8 +45,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 
     void Start()
     {
-        var recorder = GetComponent<Recorder>();
-        PhotonVoiceNetwork.Instance.InitRecorder(recorder);
+        recorder = GetComponent<Recorder>();
 
         //sensitivity = 100;
         loopDuration = 4;
@@ -58,8 +58,10 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        //loudness = GetAverageVolume() * sensitivity;
-        //loudness += loudness;
+        while (!recorder.IsInitialized)
+        {
+            PhotonVoiceNetwork.Instance.InitRecorder(recorder);
+        }
     }
 
     /*float GetAverageVolume()

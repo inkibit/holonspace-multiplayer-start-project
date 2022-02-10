@@ -1041,7 +1041,6 @@ GameObject:
   - component: {fileID: 1990092611}
   - component: {fileID: 1990092610}
   - component: {fileID: 1990092609}
-  - component: {fileID: 1990092614}
   - component: {fileID: 1990092613}
   m_Layer: 0
   m_Name: Button
@@ -1139,34 +1138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioCube: {fileID: 1271036707166037351, guid: c8f9f3b0f233dce428bad0c39fb697bf, type: 3}
---- !u!114 &1990092614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990092608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22f637e57da5d346987443dc4b92387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1990092613}
-        m_TargetAssemblyTypeName: CreateAudioCubeStart, Assembly-CSharp
-        m_MethodName: CreateRecorderObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  cooldown: 0.5
 --- !u!1 &2097842666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1154,7 @@ GameObject:
   - component: {fileID: 2097842667}
   - component: {fileID: 2097842673}
   - component: {fileID: 2097842674}
+  - component: {fileID: 2097842675}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -1257,7 +1229,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2097842675}
   sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1331,7 +1304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097842666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.039, y: 1.02, z: 0.279}
+  m_LocalPosition: {x: -0.257, y: 1.02, z: 0.279}
   m_LocalScale: {x: 0.13139234, y: 0.13139234, z: 0.13139234}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1388,13 +1361,41 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: d22f814ebeba3a7419d5fb626e64d3f0, type: 2}
+          m_ObjectArgument: {fileID: 2100000, guid: a39e3309ea7950940824553ada168f9e, type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1990092613}
+        m_TargetAssemblyTypeName: CreateAudioCubeStart, Assembly-CSharp
+        m_MethodName: CreateRecorderObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2097842675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097842666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &575230223170724341
 PrefabInstance:
   m_ObjectHideFlags: 0

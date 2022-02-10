@@ -20,8 +20,12 @@ namespace Networking.Pun2
         private bool clonedLastFrame = false;
         private string myPrefabName;
         private Transform thisObjectTransform;
-        [NonSerialized] public OVRGrabber grabber;
+        private PunOVRGrabbable grabbable;
 
+        private void Start()
+        {
+            grabbable = GetComponent<PunOVRGrabbable>();
+        }
 
         // Update is called once per frame
         void Update()
@@ -31,26 +35,29 @@ namespace Networking.Pun2
 
             if (photonView.IsMine)
             {
-
-                triggerAmount = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
-
-                if (triggerAmount > 0.75f)
+                if (grabbable.isGrabbed)
                 {
-                    pressedLastFrame = true;
+                    triggerAmount = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 
-                    OnUseEnter.Invoke();
-                }
+                    if (triggerAmount > 0.75f)
+                    {
+                        pressedLastFrame = true;
 
-                bool releasedTrigger = triggerAmount < 0.25f && pressedLastFrame;
+                        OnUseEnter.Invoke();
+                    }
 
-                if (releasedTrigger)
-                {
-                    pressedLastFrame = false;
-                    clonedLastFrame = false;
-                    OnUseExit.Invoke();
+                    bool releasedTrigger = triggerAmount < 0.25f && pressedLastFrame;
+
+                    if (releasedTrigger)
+                    {
+                        pressedLastFrame = false;
+                        clonedLastFrame = false;
+                        OnUseExit.Invoke();
                     
 
 
+
+                    }
                 }
 
             }
