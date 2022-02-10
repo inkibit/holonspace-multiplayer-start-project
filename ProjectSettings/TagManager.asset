@@ -7,6 +7,8 @@ TagManager:
   - stickyhead
   - mouth
   - stickybit
+  - HandR
+  - HandL
   layers:
   - Default
   - TransparentFX

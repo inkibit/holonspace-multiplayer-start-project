@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 2441870411490513973}
   m_Layer: 0
   m_Name: GrabVolumeSmall
-  m_TagString: Untagged
+  m_TagString: HandR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 7171267866265770947}
   m_Layer: 0
   m_Name: CustomHandRight
-  m_TagString: Untagged
+  m_TagString: HandR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc05eca0cf147c34595da141e1169e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabBegin: 0.55
+  grabBegin: 0.7
   grabEnd: 0.35
   m_parentHeldObject: 0
   m_moveHandPosition: 0
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 2441870411490793259}
   m_Layer: 0
   m_Name: GrabVolumeBig
-  m_TagString: Untagged
+  m_TagString: HandR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
