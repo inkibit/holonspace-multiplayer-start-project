@@ -44,16 +44,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
 
     void Start()
     {
-        var recorder = PersonalManager.instance.headPrefab.GetComponent<Recorder>();
-        var enumerator = recorder.MicrophonesEnumerator;
-        if (enumerator.IsSupported)
-        {
-            Debug.LogFormat("MicrophoneDebug: Enumerating available microphone devices of type {0}", recorder.MicrophoneType);
-            foreach (var device in enumerator)
-            {
-                Debug.LogFormat("MicrophoneDebug: Microphone device={0}", device);
-            }
-        }
+        var recorder = GetComponent<Recorder>();
         PhotonVoiceNetwork.Instance.InitRecorder(recorder);
 
         //sensitivity = 100;
@@ -62,7 +53,6 @@ public class MakeAudioLoopObject : MonoBehaviourPun
         _SelectedDevice = Microphone.devices[initialMicrophoneIndex].ToString();
         //packageName = "com." + Application.companyName + "." + Application.productName;
         //Debug.Log(packageName);
-
     }
 
     // Update is called once per frame
