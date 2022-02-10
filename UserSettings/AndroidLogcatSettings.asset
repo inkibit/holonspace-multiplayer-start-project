@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "1WMHH811X00447",
+    "m_SelectedDeviceId": "1WMHH820RN0395",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH811X00447",
+        "deviceId": "1WMHH820RN0395",
         "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-        "processId": 24185,
+        "processId": 16495,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -53,25 +53,61 @@
         {
             "deviceId": "1WMHH820RN0395",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 13889,
+            "processId": 28051,
             "exited": true
         },
         {
             "deviceId": "1WMHH820RN0395",
-            "name": "com.oculus.os.vrusb",
-            "processId": 5932,
-            "exited": false
+            "name": "com.oculus.xrstreamingclient",
+            "processId": 21495,
+            "exited": true
         },
         {
             "deviceId": "1WMHH820RN0395",
-            "name": "com.oculus.shellenv",
-            "processId": 3592,
+            "name": "com.oculus.os.clearactivity",
+            "processId": 26128,
             "exited": false
         },
         {
             "deviceId": "1WMHH820RN0395",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 15755,
+            "processId": 11252,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.oculus.shellenv",
+            "processId": 1961,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 12952,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 13807,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 14723,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 15411,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 16495,
             "exited": false
         }
     ],

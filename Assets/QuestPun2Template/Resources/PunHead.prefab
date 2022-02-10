@@ -278,7 +278,7 @@ MonoBehaviour:
   debugEchoMode: 0
   reliableMode: 0
   encrypt: 1
-  transmitEnabled: 1
+  transmitEnabled: 0
   samplingRate: 48000
   frameDuration: 20000
   bitrate: 30000
@@ -516,8 +516,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6194897308091228455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11508, y: -0.014618, z: -0.11}
-  m_LocalScale: {x: 0.13805617, y: 0.13805617, z: 0.13805617}
+  m_LocalPosition: {x: 0.024, y: 0.015, z: -0.067}
+  m_LocalScale: {x: 0.10371194, y: 0.10371194, z: 0.10371194}
   m_Children:
   - {fileID: 1439912124955428443}
   - {fileID: 9046923638832455891}
@@ -551,7 +551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd0bb729cb6159b4ab21c5f62cad24ee, type: 3}
+  - {fileID: 2100000, guid: 68fb70f5860ac1849abdc60aeeb31f2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

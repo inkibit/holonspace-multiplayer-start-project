@@ -1,12 +1,19 @@
 using Photon.Pun;
 using UnityEngine;
 
-public class AttachToHand : MonoBehaviour
+namespace Networking.Pun2
 {
-    [SerializeField] GameObject prefabToAttach;
 
-    public void Attach()
+    public class AttachToHand : MonoBehaviour
+
     {
-        var spawnedObject = PhotonNetwork.Instantiate(prefabToAttach.name, transform.position, transform.rotation);
+
+        [SerializeField] GameObject prefabToAttach;
+        [SerializeField] GameObject attachPoint;
+
+        public void Attach()
+        {
+            var spawnedObject = PhotonNetwork.Instantiate(prefabToAttach.name, attachPoint.transform.position, transform.rotation);
+        }
     }
 }

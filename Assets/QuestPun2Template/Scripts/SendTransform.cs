@@ -21,6 +21,7 @@ namespace Networking.Pun2
                         transform.rotation = OculusPlayer.instance.head.transform.rotation;
                         break;
 
+
                     case 2: //left
                         transform.position = OculusPlayer.instance.leftHand.transform.position;
                         transform.rotation = OculusPlayer.instance.leftHand.transform.rotation;
@@ -29,6 +30,11 @@ namespace Networking.Pun2
                     case 3: //right
                         transform.position = OculusPlayer.instance.rightHand.transform.position;
                         transform.rotation = OculusPlayer.instance.rightHand.transform.rotation;
+                        break;
+
+                    case 4: //heart
+                        transform.position = OculusPlayer.instance.heart.transform.position;
+                        transform.rotation = OculusPlayer.instance.heart.transform.rotation;
                         break;
                 }
             }
