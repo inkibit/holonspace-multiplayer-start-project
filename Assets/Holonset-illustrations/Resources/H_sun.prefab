@@ -103,6 +103,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   hideHandOnGrab: 0
+  allow2HScaling: 1
 --- !u!114 &7320174764372318401
 MonoBehaviour:
   m_ObjectHideFlags: 0

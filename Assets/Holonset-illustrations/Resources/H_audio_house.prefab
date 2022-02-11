@@ -130,6 +130,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   hideHandOnGrab: 0
+  allow2HScaling: 1
 --- !u!114 &7030225701504758553
 MonoBehaviour:
   m_ObjectHideFlags: 0
