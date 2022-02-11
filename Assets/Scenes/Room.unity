@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -351,38 +351,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1907832380, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_IsLocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_IsContraintActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_AffectTranslationY
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_TranslationAtRest.y
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1907832381, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: m_TranslationOffset.y
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 806894778582016621, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 6102413031067338895, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
       propertyPath: m_Name
       value: OVRPlayerControllerHands
