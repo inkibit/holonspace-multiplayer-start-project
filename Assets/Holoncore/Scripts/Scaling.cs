@@ -5,13 +5,26 @@ using UnityEngine.Events;
 
 public class Scaling : MonoBehaviour
 {
+    bool lastFrameGrabbingR;
+    bool lastFrameGrabbingL;
+
     private float grabAmountR;
     private float grabAmountL;
 
-    public bool bothHandsGrabbing;
+    private bool isScaling;
 
     public Transform RHand;
     public Transform LHand;
+
+    private float initialHandDistance;
+
+    private PunOVRGrabbable grabbable;
+    private Vector3 grabbableInitialScale;
+
+    private void Start()
+    {
+        grabbable = GetComponent<PunOVRGrabbable>();
+    }
 
     void Update()
     {
@@ -21,16 +34,67 @@ public class Scaling : MonoBehaviour
 
             grabAmountR = OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger);
             grabAmountL = OVRInput.Get(OVRInput.RawAxis1D.LHandTrigger);
-            
+            bool grabR = false;
+            bool grabL = false;
+
             //Check grabbing
-            if (grabAmountR > 0.5f && grabAmountL > 0.5f)
+            if (grabAmountR > 0.6f)
             {
-                bothHandsGrabbing = true;
+                grabR = true;
+            }
+            else if(grabAmountR < 0.3)
+            {
+                grabR = false;
+            }
+
+            if(grabAmountL > 0.6f)
+            {
+                grabL = true;
+            }
+            else if (grabAmountL < 0.3)
+            {
+                grabL = false;
+            }
+
+            if (grabR && grabL)
+            {
+                if (grabbable.isGrabbed && !isScaling)
+                {
+                    Debug.Log("Start Scaling");
+                    isScaling = true;
+                    initialHandDistance = Vector3.Distance(LHand.position, RHand.position);
+                    grabbableInitialScale = grabbable.transform.localScale;
+                }
             }
             else
             {
-                bothHandsGrabbing = false;
+                if (isScaling)
+                {
+                    Debug.Log("Stop Scaling");
+                    isScaling = false;
+                }
             }
+
+            if (!grabR)
+            {
+                lastFrameGrabbingR = false;
+            }
+            if (!grabL)
+            {
+                lastFrameGrabbingL = false;
+            }
+        }
+        else if (isScaling)
+        {
+            Debug.Log("Stop Scaling");
+            isScaling = false;
+        }
+
+        if (isScaling && LHand && RHand)
+        {
+            float scaleDiff = Vector3.Distance(LHand.position, RHand.position) - initialHandDistance;
+            Vector3 scaleDiffV = new Vector3(scaleDiff, scaleDiff, scaleDiff);
+            grabbable.transform.localScale = grabbableInitialScale + scaleDiffV;
         }
     }
 
