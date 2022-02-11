@@ -35,6 +35,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     [SerializeField] int initialMicrophoneIndex;
     private Recorder recorder;
 
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -48,7 +49,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
         recorder = GetComponent<Recorder>();
 
         //sensitivity = 100;
-        loopDuration = 4;
+        loopDuration = 200;
         //minScale = 0.5f;
         _SelectedDevice = Microphone.devices[initialMicrophoneIndex].ToString();
         //packageName = "com." + Application.companyName + "." + Application.productName;
@@ -112,9 +113,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
             recorder.IsRecording = false;
 
             AudioSource audioS = gameObject.GetComponent<AudioSource>();
-            GetComponentInChildren<Renderer>().material.color = Color.blue;
+            GetComponentInChildren<Renderer>().material.color = Color.white;
             recording = true;
-            audioS.clip = Microphone.Start(Microphone.devices[0], true, loopDuration, 22050);  // third argument restrict the duration of the audio to 10 seconds 
+            audioS.clip = Microphone.Start(Microphone.devices[0], true, 60, 22050);  // third argument restrict the duration of the audio to 10 seconds 
             while (!(Microphone.GetPosition(null) > 0)) { }
             samplesData = new float[audioS.clip.samples * audioS.clip.channels];
             audioS.clip.GetData(samplesData, 0);
@@ -125,7 +126,7 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     {
         if (recording)
         {
-            GetComponentInChildren<Renderer>().material.color = Color.white;
+            GetComponentInChildren<Renderer>().material.color = new Color(230, 35, 100, 255);
             Debug.Log(filename);
             AudioSource audioS = gameObject.GetComponent<AudioSource>();
 
@@ -143,7 +144,9 @@ public class MakeAudioLoopObject : MonoBehaviourPun
                     filename = (gameObject.name + "-" + GetComponent<PhotonView>().ViewID);
                     //filename = ("clip" + DateTime.Now.ToString("yyyymmdd--HH-mm-ss"));
                     filepath = Path.Combine(Application.persistentDataPath, filename + ".wav");
-                    SavWav.Save(filename, audioS.clip);
+                    AudioClip trimmedClip = ShortenAudioclip(audioS.clip, _SelectedDevice);
+
+                    SavWav.Save(filename, trimmedClip);
                     Debug.Log("File Saved Successfully at: " + filepath);
                 }
 
@@ -218,5 +221,38 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     public void RPC_SetGenerated(bool b)
     {
         generated = b;
+    }
+
+    AudioClip ShortenAudioclip(AudioClip recordedClip, string deviceName)
+    {
+
+        var position = Microphone.GetPosition(deviceName);
+        var soundData = new float[recordedClip.samples * recordedClip.channels];
+        recordedClip.GetData(soundData, 0);
+
+        //Create shortened array for the data that was used for recording
+        var newData = new float[position * recordedClip.channels];
+
+        //Copy the used samples to a new array
+        for (int i = 0; i < newData.Length; i++)
+        {
+            newData[i] = soundData[i];
+        }
+
+        //One does not simply shorten an AudioClip,
+        //    so we make a new one with the appropriate length
+        var newClip = AudioClip.Create(recordedClip.name,
+                                        position,
+                                        recordedClip.channels,
+                                        recordedClip.frequency,
+                                        false,
+                                        false);
+
+        newClip.SetData(newData, 0);        //Give it the data from the old clip
+
+        //Replace the old clip
+        AudioClip.Destroy(recordedClip);
+        recordedClip = newClip;
+        return recordedClip;
     }
 }

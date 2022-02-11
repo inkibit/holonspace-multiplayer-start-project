@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b825e473f126df04090ec832046dde3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopDuration: 3
+  loopDuration: 60
   recording: 0
   generated: 0
   initialMicrophoneIndex: 0
@@ -429,7 +429,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 68fb70f5860ac1849abdc60aeeb31f2a, type: 2}
+      objectReference: {fileID: 2100000, guid: 489c0ccf587f132468ad2fe55cf80b5e, type: 2}
     - target: {fileID: 919132149155446097, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
       propertyPath: m_Name
       value: star
