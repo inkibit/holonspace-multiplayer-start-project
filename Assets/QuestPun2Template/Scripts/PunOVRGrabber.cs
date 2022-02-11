@@ -21,5 +21,16 @@ namespace Networking.Pun2
             if(pv.IsMine)
                 base.Update();
         }
+
+        protected override void OffhandGrabbed(OVRGrabbable grabbable)
+        {
+            if (m_grabbedObj == grabbable)
+            {
+                if (grabbable.allowOffhandGrab)
+                {
+                    GrabbableRelease(Vector3.zero, Vector3.zero);
+                }
+            }
+        }
     }
 }

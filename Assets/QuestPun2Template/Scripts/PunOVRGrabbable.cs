@@ -13,9 +13,11 @@ namespace Networking.Pun2
         public UnityEvent onGrab;
         public UnityEvent onRelease;
         [SerializeField] bool hideHandOnGrab;
-        Photon.Pun.PhotonView pv;
-        Rigidbody rb;
-        ClonePrefab clonePrefab;
+        private Photon.Pun.PhotonView pv;
+        private Rigidbody rb;
+        private ClonePrefab clonePrefab;
+        public bool allow2HScaling;
+        private OVRGrabber secondHand;
 
         protected override void Start()
         {
@@ -23,27 +25,38 @@ namespace Networking.Pun2
             pv = GetComponent<Photon.Pun.PhotonView>();
             rb = gameObject.GetComponent<Rigidbody>();
             clonePrefab = gameObject.GetComponent<ClonePrefab>();
+            if (allow2HScaling)
+            {
+                gameObject.AddComponent<Scaling>();
+            }
         }
 
         override public void GrabBegin(OVRGrabber hand, Collider grabPoint)
         {
-            m_grabbedBy = hand;
             if (hand.GetComponent<Photon.Pun.PhotonView>().IsMine)
             {
-                //Change ownership if the hand grabbing is mine
-                GetComponent<Photon.Pun.PhotonView>().TransferOwnership(Photon.Pun.PhotonNetwork.LocalPlayer);
-                m_grabbedCollider = grabPoint;
-                pv.RPC("SetKinematicTrue", Photon.Pun.RpcTarget.AllBuffered); //changes the kinematic state of the object to all players when its grabbed
-                if (clonePrefab != null)
+                if (allow2HScaling)
                 {
-                    clonePrefab.grabber = m_grabbedBy;
+                    m_allowOffhandGrab = false;
                 }
-                if (onGrab != null)
+                m_grabbedBy = hand;
+                if (hand.GetComponent<Photon.Pun.PhotonView>().IsMine)
                 {
-                    onGrab.Invoke();
+                    //Change ownership if the hand grabbing is mine
+                    GetComponent<Photon.Pun.PhotonView>().TransferOwnership(Photon.Pun.PhotonNetwork.LocalPlayer);
+                    m_grabbedCollider = grabPoint;
+                    pv.RPC("SetKinematicTrue", Photon.Pun.RpcTarget.AllBuffered); //changes the kinematic state of the object to all players when its grabbed
+                    if (clonePrefab != null)
+                    {
+                        clonePrefab.grabber = m_grabbedBy;
+                    }
+                    if (onGrab != null)
+                    {
+                        onGrab.Invoke();
+                    }
+                    if (hideHandOnGrab)
+                        m_grabbedBy.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
                 }
-                if (hideHandOnGrab)
-                    m_grabbedBy.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
             }
         }
 
@@ -66,6 +79,10 @@ namespace Networking.Pun2
                 }
                 if (onRelease != null)
                     onRelease.Invoke();
+                if (allow2HScaling)
+                {
+                    m_allowOffhandGrab = true;
+                }
             }
         }
 
