@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class TriggerRecorderDeletion : MonoBehaviour
 {
-    [SerializeField] bool shouldBeGrabbed = true;
     [SerializeField] LayerMask layerToDelete;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == layerToDelete)
+        if ((layerToDelete & 1 << other.gameObject.layer) == 1 << other.gameObject.layer)
         {
-            if (shouldBeGrabbed)
+            if(GetComponentInParent<PunOVRGrabbable>())
             {
-                if(TryGetComponent(out PunOVRGrabbable grabbable))
+                var grabbable = GetComponentInParent<PunOVRGrabbable>();
+                if (GetComponentInParent<MakeAudioLoopObject>())
                 {
-                    if (GetComponent<MakeAudioLoopObject>())
+                    if (grabbable.isGrabbed)
                     {
-                        if (grabbable.isGrabbed)
-                        {
-                            grabbable.GrabEnd(Vector3.zero, Vector3.zero);
-                            PhotonNetwork.Destroy(other.gameObject);
-                        }
+                        grabbable.GrabEnd(Vector3.zero, Vector3.zero);
+                        PhotonNetwork.Destroy(other.gameObject.GetComponentInParent<PhotonView>().gameObject);
                     }
                 }
             }
             else
             {
-                PhotonNetwork.Destroy(other.gameObject);
+                PhotonNetwork.Destroy(other.gameObject.GetComponentInParent<PhotonView>().gameObject);
             }
         }
     }

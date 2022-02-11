@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b819898eaa18e2b47bcfb012908b006e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldBeGrabbed: 1
   layerToDelete:
     serializedVersion: 2
     m_Bits: 64
