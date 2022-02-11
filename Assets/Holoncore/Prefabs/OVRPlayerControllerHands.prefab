@@ -792,7 +792,6 @@ GameObject:
   - component: {fileID: 6102413031073365357}
   - component: {fileID: 6102413031073163567}
   - component: {fileID: 6102413031073197169}
-  - component: {fileID: 959161314}
   - component: {fileID: 959161315}
   - component: {fileID: 959161316}
   m_Layer: 3
@@ -893,25 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1818360610 &959161314
-ScaleConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6102413031067338895}
-  m_Enabled: 1
-  m_Weight: 1
-  m_ScaleAtRest: {x: 1, y: 1, z: 1}
-  m_ScaleOffset: {x: 0.99999976, y: 0.99999976, z: 0.99999976}
-  m_AffectScalingX: 1
-  m_AffectScalingY: 1
-  m_AffectScalingZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
 --- !u!114 &959161315
 MonoBehaviour:
   m_ObjectHideFlags: 0
