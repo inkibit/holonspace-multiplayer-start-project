@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 566679704}
   - component: {fileID: 5198732650542690408}
   - component: {fileID: 6208231481884914339}
+  - component: {fileID: 983566342717061359}
   m_Layer: 0
   m_Name: star-loop-spawner
   m_TagString: Untagged
@@ -133,6 +134,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16180769, y: 0.13613114, z: 0.22709027}
   m_Center: {x: 0.0038517118, y: 0.01031591, z: -0.01155512}
+--- !u!114 &983566342717061359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566679697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b819898eaa18e2b47bcfb012908b006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldBeGrabbed: 1
+  layerToDelete:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4888474243050283278
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +205,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 1294876581}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
