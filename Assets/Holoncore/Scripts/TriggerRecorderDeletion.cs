@@ -10,21 +10,17 @@ public class TriggerRecorderDeletion : MonoBehaviour
     {
         if ((layerToDelete & 1 << other.gameObject.layer) == 1 << other.gameObject.layer)
         {
-            if(GetComponentInParent<PunOVRGrabbable>())
+            if(GetComponentInParent<MakeAudioLoopObject>())
             {
-                var grabbable = GetComponentInParent<PunOVRGrabbable>();
-                if (GetComponentInParent<MakeAudioLoopObject>())
+                if (GetComponentInParent<PunOVRGrabbable>())
                 {
+                    var grabbable = GetComponentInParent<PunOVRGrabbable>();
                     if (grabbable.isGrabbed)
                     {
                         grabbable.GrabEnd(Vector3.zero, Vector3.zero);
                         PhotonNetwork.Destroy(other.gameObject.GetComponentInParent<PhotonView>().gameObject);
                     }
                 }
-            }
-            else
-            {
-                PhotonNetwork.Destroy(other.gameObject.GetComponentInParent<PhotonView>().gameObject);
             }
         }
     }
