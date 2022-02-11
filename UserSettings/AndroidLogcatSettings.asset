@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "1WMHH820RN0395",
         "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-        "processId": 21901,
+        "processId": 6657,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -114,6 +114,12 @@
             "deviceId": "1WMHH820RN0395",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
             "processId": 21901,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH820RN0395",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 6657,
             "exited": false
         }
     ],
