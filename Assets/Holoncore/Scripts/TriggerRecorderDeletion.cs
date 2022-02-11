@@ -17,7 +17,7 @@ public class TriggerRecorderDeletion : MonoBehaviour
                     var grabbable = GetComponentInParent<PunOVRGrabbable>();
                     if (grabbable.isGrabbed)
                     {
-                        grabbable.GrabEnd(Vector3.zero, Vector3.zero);
+                        grabbable.grabbedBy.ForceRelease(grabbable);
                         PhotonNetwork.Destroy(other.gameObject.GetComponentInParent<PhotonView>().gameObject);
                     }
                 }
