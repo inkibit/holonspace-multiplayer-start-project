@@ -1,19 +1,13 @@
 {
-    "m_SelectedDeviceId": "1WMHH820RN0395",
+    "m_SelectedDeviceId": "1WMHH811X00447",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH820RN0395",
+        "deviceId": "1WMHH811X00447",
         "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-        "processId": 21901,
+        "processId": 12072,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "1WMHH811X00447",
-            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 18524,
-            "exited": true
-        },
         {
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
@@ -48,6 +42,12 @@
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
             "processId": 24185,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
+            "processId": 12072,
             "exited": false
         },
         {
