@@ -520,10 +520,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 959161316, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
-      propertyPath: sceneViewId
-      value: 27
-      objectReference: {fileID: 0}
     - target: {fileID: 6102413031067338895, guid: 8d86a7ea4c2a7d44ea056a9d072af7ea, type: 3}
       propertyPath: m_Name
       value: OVRPlayerControllerHands

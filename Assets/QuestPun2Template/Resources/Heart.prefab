@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 566679704}
   - component: {fileID: 5198732650542690408}
   - component: {fileID: 6208231481884914339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: star-loop-spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: -6641121958725380674}
   - component: {fileID: 1294876581}
   - component: {fileID: 889417397500206995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4715870740082739552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: attach  point
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -273,6 +273,10 @@ PrefabInstance:
     - target: {fileID: 3639296443568920184, guid: 736ee52b86aa53f4c8be70d4512477b8, type: 3}
       propertyPath: m_Name
       value: flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639296443568920184, guid: 736ee52b86aa53f4c8be70d4512477b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4164334843455655106, guid: 736ee52b86aa53f4c8be70d4512477b8, type: 3}
       propertyPath: m_RootOrder
