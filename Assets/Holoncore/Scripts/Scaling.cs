@@ -94,7 +94,7 @@ public class Scaling : MonoBehaviour
         {
             float scaleDiff = Vector3.Distance(LHand.position, RHand.position) - initialHandDistance;
             Vector3 scaleDiffV = new Vector3(scaleDiff, scaleDiff, scaleDiff);
-            grabbable.transform.localScale = grabbableInitialScale + scaleDiffV;
+            grabbable.transform.localScale = grabbableInitialScale + scaleDiffV * grabbable.transform.localScale.x * 5;
         }
     }
 
