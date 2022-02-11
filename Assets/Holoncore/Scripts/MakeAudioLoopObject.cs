@@ -25,8 +25,8 @@ public class MakeAudioLoopObject : MonoBehaviourPun
     static float[] samplesData;
     public bool recording;
     public bool generated;
-    private string filename;
-    private string filepath;
+    public string filename;
+    public string filepath;
     private int audioCreator;
     private Recorder photonRecorder;
     //private string packageName;
