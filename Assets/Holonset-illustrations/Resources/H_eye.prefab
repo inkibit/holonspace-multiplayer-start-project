@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8964257635219175596}
   - component: {fileID: 4978538724603417672}
   - component: {fileID: 3995536266064332436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6699047037043464060}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.7071068, w: -0.000000029802322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -0.0010647774, y: 0.013582706, z: -0.07190085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6653012780460177917}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!54 &8898163103901166047
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 7402488496112656745}
+  m_grabbedBy: {fileID: 0}
   onGrab:
     m_PersistentCalls:
       m_Calls: []
@@ -160,7 +161,7 @@ GameObject:
   - component: {fileID: 7402488496112656744}
   - component: {fileID: 7402488496112656745}
   - component: {fileID: 7402488496112656758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}

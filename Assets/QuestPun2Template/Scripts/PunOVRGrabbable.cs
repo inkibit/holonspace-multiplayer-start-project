@@ -108,5 +108,6 @@ namespace Networking.Pun2
         {
             rb.isKinematic = m_grabbedKinematic;
         }
+
     }
 }

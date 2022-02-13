@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4693507751115009843}
   - component: {fileID: 8670152941947159511}
   - component: {fileID: 736127077038051595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7039701761334509795}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.7071068, w: -0.000000029802322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0.33999997, y: -0.46827376, z: -0.0715867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8692672508610032952}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!54 &5060181825370390080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 5822308955068654811}
+  m_grabbedBy: {fileID: 0}
   onGrab:
     m_PersistentCalls:
       m_Calls: []
@@ -154,6 +155,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9050167331147632948}
     m_Modifications:
+    - target: {fileID: 1880943992920009624, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2373710824637160464, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -202,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house
       objectReference: {fileID: 0}
+    - target: {fileID: 3151057147090896554, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3511173523850700671, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
       propertyPath: m_ReceiveGI
       value: 2
@@ -209,6 +218,10 @@ PrefabInstance:
     - target: {fileID: 3827172118382080899, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
       propertyPath: m_ReceiveGI
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182006391075614345, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6521460462277985681, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
       propertyPath: m_ReceiveGI

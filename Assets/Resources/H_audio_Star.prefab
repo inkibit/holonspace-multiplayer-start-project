@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9118113389747417146}
   - component: {fileID: 9118113389747417149}
   - component: {fileID: 4097665351276796420}
+  - component: {fileID: 271093897118985329}
   m_Layer: 6
   m_Name: H_audio_Star
   m_TagString: Untagged
@@ -98,7 +99,8 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints:
-  - {fileID: 3311173853268749361}
+  - {fileID: 271093897118985329}
+  m_grabbedBy: {fileID: 0}
   onGrab:
     m_PersistentCalls:
       m_Calls:
@@ -315,7 +317,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: -1
+  photonMicrophoneDeviceId: 0
   interestGroup: 0
   debugEchoMode: 1
   reliableMode: 0
@@ -366,6 +368,19 @@ MonoBehaviour:
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 0
   SetupDebugSpeaker: 0
+--- !u!65 &271093897118985329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010121392742755625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.134752, y: 0.053854793, z: 0.124200195}
+  m_Center: {x: -0.0035172552, y: -0.0017586201, z: 0.00527592}
 --- !u!1001 &150715402579089977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -443,21 +458,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
 --- !u!4 &404703435197611474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
-  m_PrefabInstance: {fileID: 150715402579089977}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &3311173853268749361 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 3451118302482216456, guid: 4647cf3da1a48044b9ead1fda2268ba2, type: 3}
   m_PrefabInstance: {fileID: 150715402579089977}
   m_PrefabAsset: {fileID: 0}
