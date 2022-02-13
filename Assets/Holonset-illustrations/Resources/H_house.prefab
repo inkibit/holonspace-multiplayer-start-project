@@ -202,6 +202,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: house
       objectReference: {fileID: 0}
+    - target: {fileID: 3511173523850700671, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827172118382080899, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6521460462277985681, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d453531088057b94b83ceafe6f932ee9, type: 3}
 --- !u!4 &8692672508610032952 stripped

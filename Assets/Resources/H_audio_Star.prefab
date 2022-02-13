@@ -130,7 +130,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   hideHandOnGrab: 0
-  allow2HScaling: 0
+  allow2HScaling: 1
 --- !u!114 &5744642509443285753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +274,8 @@ MonoBehaviour:
   loopDuration: 60
   recording: 0
   generated: 0
+  filename: 
+  filepath: 
   initialMicrophoneIndex: 0
 --- !u!114 &9118113389747417146
 MonoBehaviour:

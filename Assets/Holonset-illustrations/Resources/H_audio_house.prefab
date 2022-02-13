@@ -274,6 +274,8 @@ MonoBehaviour:
   loopDuration: 120
   recording: 0
   generated: 0
+  filename: 
+  filepath: 
   initialMicrophoneIndex: 0
 --- !u!114 &5810623439254995418
 MonoBehaviour:
@@ -416,12 +418,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: abd5ade12d583474989201acb1ee1471, type: 2}
+    - target: {fileID: -7101371007105264270, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
       propertyPath: m_Name
       value: house
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
       propertyPath: m_Convex
@@ -429,6 +443,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423045620967985251, guid: 05ecb906e88a0a94ca7178c71cdf7a83, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
