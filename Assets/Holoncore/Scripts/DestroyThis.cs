@@ -10,13 +10,13 @@ public class DestroyThis : MonoBehaviour
     public void destroyThis()
 
     {
-            //this turns off the OVRGrabbable script
+        //this turns off the OVRGrabbable script
 
-            this.GetComponent<PunOVRGrabbable>().enabled = false;
+        this.GetComponent<PunOVRGrabbable>().enabled = false;
 
         //this gets the hand that's grabbing it
 
-        myGrabber = this.GetComponent<PunOVRGrabbable>().m_grabbedBy;
+        myGrabber = this.GetComponent<PunOVRGrabbable>().grabbedBy;
 
         //use ForceRelease method in the OVRGrabber to release object
 

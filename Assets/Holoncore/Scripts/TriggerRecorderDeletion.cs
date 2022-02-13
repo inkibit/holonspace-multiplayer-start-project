@@ -10,9 +10,9 @@ public class TriggerRecorderDeletion : MonoBehaviour
     {
         if ((layerToDelete & 1 << other.gameObject.layer) == 1 << other.gameObject.layer)
         {
-            if(GetComponentInParent<MakeAudioLoopObject>())
+            if(other.GetComponentInParent<MakeAudioLoopObject>())
             {
-                if (GetComponentInParent<PunOVRGrabbable>())
+                if (other.GetComponentInParent<PunOVRGrabbable>())
                 {
                     var grabbable = GetComponentInParent<PunOVRGrabbable>();
                     if (grabbable.isGrabbed)
