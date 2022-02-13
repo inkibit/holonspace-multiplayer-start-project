@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 //
@@ -12,6 +13,7 @@ namespace Networking.Pun2
     {
         public UnityEvent onGrab;
         public UnityEvent onRelease;
+        public event Action<PunOVRGrabbable> OnRelease;
         [SerializeField] bool hideHandOnGrab;
         private Photon.Pun.PhotonView pv;
         private Rigidbody rb;
@@ -77,8 +79,8 @@ namespace Networking.Pun2
                 {
                     clonePrefab.grabber = null;
                 }
-                if (onRelease != null)
-                    onRelease.Invoke();
+                onRelease?.Invoke();
+                OnRelease?.Invoke(this);
                 if (allow2HScaling)
                 {
                     m_allowOffhandGrab = true;
