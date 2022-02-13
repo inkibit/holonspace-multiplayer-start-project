@@ -35,6 +35,7 @@ public class RecycleBin : MonoBehaviour
         if (candidatesToDelete.Contains(other.gameObject))
         {
             candidatesToDelete.Remove(other.gameObject);
+            other.GetComponentInParent<PunOVRGrabbable>().OnRelease -= DeleteObject;
         }
     }
 
