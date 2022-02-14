@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3084837294809913913}
   - component: {fileID: 1423042272652736221}
   - component: {fileID: 7050953592968274945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,6 +157,10 @@ PrefabInstance:
     - target: {fileID: 7326179646514314776, guid: 4b6c3e208257688489411c9c5daf2093, type: 3}
       propertyPath: m_Name
       value: bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326179646514314776, guid: 4b6c3e208257688489411c9c5daf2093, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7989387104849159330, guid: 4b6c3e208257688489411c9c5daf2093, type: 3}
       propertyPath: m_RootOrder

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1397590694682859692}
   - component: {fileID: 708013747981458603}
   - component: {fileID: 3291671207686411808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 3995749808309156724}
   - component: {fileID: 1009900343976990608}
   - component: {fileID: 8963938438113707340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,14 +125,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721354023129552036}
-  m_LocalRotation: {x: -0.49999684, y: 0.5000014, z: -0.4999986, w: 0.50000316}
+  m_LocalRotation: {x: -0.49999562, y: 0.5000044, z: -0.49999562, w: 0.5000044}
   m_LocalPosition: {x: 0.19400021, y: 0.074, z: -0.08399929}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 662068425744617191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -89.999}
 --- !u!54 &3488057318078966279
 Rigidbody:
   m_ObjectHideFlags: 0

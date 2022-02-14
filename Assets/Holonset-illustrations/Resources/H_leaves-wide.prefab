@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5693628630121416371}
   - component: {fileID: 5693628630121416332}
   - component: {fileID: 5693628630121416333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leaves-wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 6187464098885876254}
   - component: {fileID: 7831315085850187514}
   - component: {fileID: 2219085027343713318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_leaves-wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,14 +125,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8452960500762449358}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.7071068, w: -0.000000029802322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0.294, y: -0.1531167, z: -0.07219878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8740828927155763397}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!54 &5964341719356238701
 Rigidbody:
   m_ObjectHideFlags: 0

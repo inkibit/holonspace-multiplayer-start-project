@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7243409823059894907}
   - component: {fileID: 6431725581161052127}
   - component: {fileID: 4830008458558186996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: disk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7193348505510783239}
   - component: {fileID: 4228394983628240087}
   - component: {fileID: 2659168536071327688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398508080352469407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dreamcatcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 6399666133416752013}
   - component: {fileID: 7714171545244405461}
   - component: {fileID: 270805225657189052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leaf_single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 7662800153965083597}
   - component: {fileID: 4988479583288364023}
   - component: {fileID: 135358401817136129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leaf_single__2_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 2159785734188392012}
   - component: {fileID: 2632701333510058664}
   - component: {fileID: 6263546577246724212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_dreamcatcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,14 +448,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4425247003710648732}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.7071068, w: -0.000000029802322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0.07608223, y: 0.32105994, z: -0.07194396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1398508080352469407}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!54 &1937332132516400959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1582453284652438907}
   - component: {fileID: 1166918445343367122}
   - component: {fileID: 7705712702968930147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leaf_single__1_
   m_TagString: Untagged
   m_Icon: {fileID: 0}

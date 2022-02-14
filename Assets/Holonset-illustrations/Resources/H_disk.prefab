@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 425175327735963033}
   - component: {fileID: 4365858246362624381}
   - component: {fileID: 5688901159919592353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_disk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,6 +157,10 @@ PrefabInstance:
     - target: {fileID: 106884601952896062, guid: 81cf4f3fb3b03fa43b966c7ee8d80720, type: 3}
       propertyPath: m_Name
       value: disk
+      objectReference: {fileID: 0}
+    - target: {fileID: 106884601952896062, guid: 81cf4f3fb3b03fa43b966c7ee8d80720, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 734203657698729604, guid: 81cf4f3fb3b03fa43b966c7ee8d80720, type: 3}
       propertyPath: m_RootOrder

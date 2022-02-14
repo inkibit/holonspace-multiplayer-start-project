@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4358351266988086735}
   - component: {fileID: 363625152831027499}
   - component: {fileID: 8605946372963970039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_blob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 7999306902611525788, guid: 5ee1e0a4d27e12d46af3fa7e5f0c5148, type: 3}
       propertyPath: m_Name
       value: blob
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999306902611525788, guid: 5ee1e0a4d27e12d46af3fa7e5f0c5148, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8359740076826173769, guid: 5ee1e0a4d27e12d46af3fa7e5f0c5148, type: 3}
       propertyPath: m_ReceiveGI

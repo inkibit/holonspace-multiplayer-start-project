@@ -95,7 +95,6 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 7402488496112656745}
-  m_grabbedBy: {fileID: 0}
   onGrab:
     m_PersistentCalls:
       m_Calls: []

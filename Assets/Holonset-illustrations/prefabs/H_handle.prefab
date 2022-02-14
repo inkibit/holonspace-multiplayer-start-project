@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4094900556037902884}
   - component: {fileID: 118254780016590528}
   - component: {fileID: 8341103701835295772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748726268846276084}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0.00003692508}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0.000034922778}
   m_LocalPosition: {x: 0.4166, y: -0.063417256, z: -0.04099995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6890509500680538548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 179.996, y: 0, z: 0}
 --- !u!54 &4598125457767269207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -201,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 1853191615708355656, guid: bc8430d01a8f33c43bd5d36731936364, type: 3}
       propertyPath: m_Name
       value: handle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853191615708355656, guid: bc8430d01a8f33c43bd5d36731936364, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc8430d01a8f33c43bd5d36731936364, type: 3}

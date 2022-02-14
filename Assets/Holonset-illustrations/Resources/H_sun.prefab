@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7320174764372318401}
   - component: {fileID: 6694141725606278181}
   - component: {fileID: 3351790732088583929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4973881850049689361}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.7071068, w: -0.000000029802322}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0.07293522, y: -0.26250303, z: -0.072224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480709577427385216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!54 &7101522178732362162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 9172672353688240592}
   - component: {fileID: 9172672353688240595}
   - component: {fileID: 9172672353688240594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 9172672354337849030}
   - component: {fileID: 9172672354337849033}
   - component: {fileID: 9172672354337849032}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}

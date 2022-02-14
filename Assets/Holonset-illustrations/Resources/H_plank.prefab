@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2883079701299775362}
   - component: {fileID: 1257317875279850342}
   - component: {fileID: 7140261998783773114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 8908935499334560421, guid: 8fdac0be29eed514ea07e7c7cb79b76e, type: 3}
       propertyPath: m_Name
       value: plank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908935499334560421, guid: 8fdac0be29eed514ea07e7c7cb79b76e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fdac0be29eed514ea07e7c7cb79b76e, type: 3}

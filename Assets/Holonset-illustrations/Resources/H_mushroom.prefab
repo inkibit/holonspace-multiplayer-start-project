@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7824447887593780671}
   - component: {fileID: 6189678311472634203}
   - component: {fileID: 2847271286855682951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5478276001070619247}
-  m_LocalRotation: {x: -0.0060637593, y: 0.7044474, z: -0.7095908, w: -0.014072329}
+  m_LocalRotation: {x: 0.0060668592, y: -0.70444816, z: 0.70959, w: 0.014073105}
   m_LocalPosition: {x: -0.35103422, y: -0.45973235, z: -0.088335454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2170648937950903785}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.229, y: -56.474, z: 121.894}
 --- !u!54 &7750084747472364748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2170648937950903785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 8524075116361087240}
   - component: {fileID: 8524075116361087247}
   - component: {fileID: 8524075116361087246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mushroom_cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 8524075116520854259}
   - component: {fileID: 8524075116520854258}
   - component: {fileID: 8524075116520854257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

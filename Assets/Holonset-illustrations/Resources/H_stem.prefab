@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6940618922779095547}
   - component: {fileID: 6422742642723593503}
   - component: {fileID: 3118610665841676227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4666489224312364587}
-  m_LocalRotation: {x: -0.0060637593, y: 0.7044474, z: -0.7095908, w: -0.014072329}
+  m_LocalRotation: {x: 0.0060668592, y: -0.70444816, z: 0.70959, w: 0.014073105}
   m_LocalPosition: {x: -0.15817082, y: -0.45007873, z: -0.09744927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1574571866122602187}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.229, y: -56.474, z: 121.894}
 --- !u!54 &7442718190738366600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 8831441090022495595}
   - component: {fileID: 8831441090022495594}
   - component: {fileID: 8831441090022495597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

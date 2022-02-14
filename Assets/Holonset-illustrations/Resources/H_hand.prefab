@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8150793690896702846}
   - component: {fileID: 5218913210437317018}
   - component: {fileID: 4181839020566930246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 7764473415890368221}
   - component: {fileID: 7764473415890368034}
   - component: {fileID: 7764473415890368035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

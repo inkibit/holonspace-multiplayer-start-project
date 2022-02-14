@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99399240}
   - component: {fileID: 99399241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4078775859101782747}
   - component: {fileID: 138093490295963199}
   - component: {fileID: 8326934482067500259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: H_bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 2469984472822892775}
   - component: {fileID: 2469984472822892772}
   - component: {fileID: 2469984472822892773}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
