@@ -11,7 +11,6 @@ namespace Networking.Pun2
     {
         bool returningToMenu;
         OVRScreenFade screenFader;
-        [SerializeField] string sceneToGo;
 
         private void Start()
         {
@@ -37,7 +36,7 @@ namespace Networking.Pun2
 
         IEnumerator Load()
         {
-            AsyncOperation async = SceneManager.LoadSceneAsync(sceneToGo);
+            AsyncOperation async = SceneManager.LoadSceneAsync(0);
             PhotonNetwork.Disconnect();
             async.allowSceneActivation = false;
             screenFader.FadeOut();

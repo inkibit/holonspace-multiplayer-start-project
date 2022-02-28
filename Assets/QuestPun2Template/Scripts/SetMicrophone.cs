@@ -12,7 +12,15 @@ namespace Networking.Pun2
             string[] devices = Microphone.devices;
             if (devices.Length > 0)
             {
-                GetComponent<Recorder>().UnityMicrophoneDevice = devices[0];
+                var recorder = GetComponent<Recorder>();
+                recorder.UnityMicrophoneDevice = devices[0];
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+                recorder.MicrophoneType = Recorder.MicType.Photon;
+#endif
+#if !UNITY_WINDOWS || UNITY_EDITOR
+                recorder.MicrophoneType = Recorder.MicType.Unity;
+#endif
             }
         }
 
