@@ -43,6 +43,9 @@ GameObject:
   - component: {fileID: 4366997354882302921}
   - component: {fileID: 4366997354882504587}
   - component: {fileID: 4366997354882405077}
+  - component: {fileID: 6102413031410275148}
+  - component: {fileID: 6102413031410275149}
+  - component: {fileID: 6102413031410275150}
   m_Layer: 3
   m_Name: OVRPlayerControllerHandsHeart
   m_TagString: Player
@@ -84,7 +87,7 @@ CharacterController:
   m_SlopeLimit: 80
   m_StepOffset: 0.4
   m_SkinWidth: 0.02
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0.0001
   m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!114 &4366997354882302921
 MonoBehaviour:
@@ -98,9 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.1
-  Damping: 0.3
-  BackAndSideDampen: 0.5
+  Acceleration: 0.12
+  Damping: 0.6
+  BackAndSideDampen: 0.8
   JumpForce: 0.3
   RotationAmount: 1.5
   RotationRatchet: 45
@@ -142,6 +145,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &6102413031410275148
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366997354876302891}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &6102413031410275149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366997354876302891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
+--- !u!114 &6102413031410275150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366997354876302891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 6102413031410275149}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7140521133566139259
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,8 +440,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.12
-  far clip plane: 1000
+  near clip plane: 0.15
+  far clip plane: 300
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -395,7 +453,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -443,7 +501,7 @@ MonoBehaviour:
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
-  m_AntialiasingQuality: 0
+  m_AntialiasingQuality: 1
   m_StopNaN: 0
   m_Dithering: 1
   m_ClearDepth: 1
@@ -480,7 +538,7 @@ GameObject:
   - component: {fileID: 7140521133573307099}
   - component: {fileID: 7101766458947890581}
   - component: {fileID: 7140521133566298518}
-  - component: {fileID: 7505970767577820587}
+  - component: {fileID: 7743342016841712508}
   m_Layer: 3
   m_Name: OVRNetworkCameraRig
   m_TagString: Untagged
@@ -516,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usePerEyeCameras: 0
-  useFixedUpdateForTracking: 1
+  useFixedUpdateForTracking: 0
   disableEyeAnchorCameras: 0
 --- !u!114 &7101766458947890581
 MonoBehaviour:
@@ -551,7 +609,7 @@ MonoBehaviour:
   rightHand: {fileID: 7140521133566211577}
   leftHand: {fileID: 7140521133566206829}
   heart: {fileID: 7505970768731441311}
---- !u!114 &7505970767577820587
+--- !u!114 &7743342016841712508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,7 +667,7 @@ MonoBehaviour:
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
   AllowRecenter: 1
-  LateControllerUpdate: 1
+  LateControllerUpdate: 0
   LateLatching: 0
 --- !u!1 &7140521133566201655
 GameObject:
