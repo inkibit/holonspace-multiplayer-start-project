@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4812139487584898599}
   - component: {fileID: 5889204549035220598}
   - component: {fileID: 7550999532470465170}
-  - component: {fileID: 1922799092274896974}
   m_Layer: 6
   m_Name: H_handle
   m_TagString: Untagged
@@ -29,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8154351306741543334}
-  m_LocalRotation: {x: 0.27060926, y: 0.65325797, z: 0.653305, w: -0.27058688}
+  m_LocalRotation: {x: -0.27058095, y: -0.65328854, z: -0.65328854, w: 0.27058095}
   m_LocalPosition: {x: -0.0668, y: 0.1626, z: 0.3936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3949282952519550438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -135.003}
 --- !u!54 &6242403273086439173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -73,7 +72,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 5889204549035220598}
-  - {fileID: 1922799092274896974}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -131,22 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1922799092274896974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8154351306741543334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1001 &2608323828750222100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,6 +136,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7854487789335552113}
     m_Modifications:
+    - target: {fileID: 195668558945516957, guid: bc8430d01a8f33c43bd5d36731936364, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1367980860098676466, guid: bc8430d01a8f33c43bd5d36731936364, type: 3}
       propertyPath: m_RootOrder
       value: 0

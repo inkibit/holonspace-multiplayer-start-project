@@ -49,7 +49,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.616
@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 3163838126448198282}
   - component: {fileID: 4078775859101782747}
   - component: {fileID: 138093490295963199}
-  - component: {fileID: 8326934482067500259}
   m_Layer: 6
   m_Name: H_bubble
   m_TagString: Untagged
@@ -166,7 +165,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 4078775859101782747}
-  - {fileID: 8326934482067500259}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -224,22 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8326934482067500259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732199283261373707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &2469984472822892699
 GameObject:
   m_ObjectHideFlags: 0

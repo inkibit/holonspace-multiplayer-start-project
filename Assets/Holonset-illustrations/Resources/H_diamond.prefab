@@ -49,7 +49,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.7
@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 3616840742890470733}
   - component: {fileID: 2396784122029567260}
   - component: {fileID: 1743794867761267192}
-  - component: {fileID: 7662480824380986148}
   m_Layer: 6
   m_Name: H_diamond
   m_TagString: Untagged
@@ -167,7 +166,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 2396784122029567260}
-  - {fileID: 7662480824380986148}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -225,22 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7662480824380986148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131639507485704908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1001 &6521554694449173233
 PrefabInstance:
   m_ObjectHideFlags: 0

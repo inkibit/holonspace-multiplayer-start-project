@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5931310413650837346}
   - component: {fileID: 4693507751115009843}
   - component: {fileID: 8670152941947159511}
-  - component: {fileID: 736127077038051595}
   m_Layer: 6
   m_Name: H_house
   m_TagString: Untagged
@@ -73,7 +72,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 4693507751115009843}
-  - {fileID: 736127077038051595}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -131,22 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &736127077038051595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7039701761334509795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1001 &6364587913090328872
 PrefabInstance:
   m_ObjectHideFlags: 0

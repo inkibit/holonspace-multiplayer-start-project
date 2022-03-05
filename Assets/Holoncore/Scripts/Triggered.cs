@@ -3,7 +3,8 @@ using UnityEngine.Events;
 
 public class Triggered : MonoBehaviour
 {
-    public UnityEvent TriggerEvent;
+    public UnityEvent TriggerEnter;
+    public UnityEvent TriggerExit;
     [SerializeField] float cooldown = 0;
     private float counter;
     private bool onCooldown = false;
@@ -11,8 +12,13 @@ public class Triggered : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (onCooldown) return;
-        TriggerEvent.Invoke();
+        TriggerEnter.Invoke();
         onCooldown = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        TriggerExit.Invoke();
     }
 
     private void Update()

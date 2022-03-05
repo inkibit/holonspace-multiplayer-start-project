@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4160486196696222312}
   - component: {fileID: 3084837294809913913}
   - component: {fileID: 1423042272652736221}
-  - component: {fileID: 7050953592968274945}
   m_Layer: 6
   m_Name: H_bottle
   m_TagString: Untagged
@@ -73,7 +72,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 3084837294809913913}
-  - {fileID: 7050953592968274945}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -131,22 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7050953592968274945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747369073763694057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1001 &8775268974294973677
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 1048096975196147229}
   - component: {fileID: 2159785734188392012}
   - component: {fileID: 2632701333510058664}
-  - component: {fileID: 6263546577246724212}
   m_Layer: 6
   m_Name: H_dreamcatcher
   m_TagString: Untagged
@@ -492,7 +491,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 2159785734188392012}
-  - {fileID: 6263546577246724212}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -554,22 +552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6263546577246724212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4425247003710648732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &9114726708166273476
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "1WMHH8465H1014",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "1WMHH8465H1014",
+        "name": "com.inkibit.MultiplayerURPstarterproject",
+        "processId": 31735,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -157,6 +157,12 @@
             "name": "com.inkibit.MultiplayerURPstarterproject",
             "processId": 29231,
             "exited": true
+        },
+        {
+            "deviceId": "1WMHH8465H1014",
+            "name": "com.inkibit.MultiplayerURPstarterproject",
+            "processId": 31735,
+            "exited": false
         }
     ],
     "m_Tags": {

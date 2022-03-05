@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 2594440949780261669}
   - component: {fileID: 3995749808309156724}
   - component: {fileID: 1009900343976990608}
-  - component: {fileID: 8963938438113707340}
   m_Layer: 6
   m_Name: H_star
   m_TagString: Untagged
@@ -169,7 +168,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 3995749808309156724}
-  - {fileID: 8963938438113707340}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -227,19 +225,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8963938438113707340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721354023129552036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3

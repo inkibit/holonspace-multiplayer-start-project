@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8004585219852691709}
   - component: {fileID: 8964257635219175596}
   - component: {fileID: 4978538724603417672}
-  - component: {fileID: 3995536266064332436}
   m_Layer: 6
   m_Name: H_eye
   m_TagString: Untagged
@@ -73,7 +72,6 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 8964257635219175596}
-  - {fileID: 3995536266064332436}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -131,22 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6d4ee214994c4e9bfefc28492a511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3995536266064332436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6699047037043464060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &7402488496112656759
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +141,6 @@ GameObject:
   - component: {fileID: 7402488496112656747}
   - component: {fileID: 7402488496112656744}
   - component: {fileID: 7402488496112656745}
-  - component: {fileID: 7402488496112656758}
   m_Layer: 6
   m_Name: eye
   m_TagString: Untagged
@@ -242,19 +223,5 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 360388842983368876, guid: 872d5ff931e5c2148ba2edc224f1f15f, type: 3}
---- !u!64 &7402488496112656758
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7402488496112656759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 360388842983368876, guid: 872d5ff931e5c2148ba2edc224f1f15f, type: 3}
