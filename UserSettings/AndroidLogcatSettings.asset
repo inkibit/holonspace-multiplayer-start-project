@@ -1,25 +1,13 @@
 {
-    "m_SelectedDeviceId": "1WMHH820RN0395",
+    "m_SelectedDeviceId": "1WMHH811X00447",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH8465H1014",
-        "name": "com.inkibit.MultiplayerURPstarterproject",
-        "processId": 31735,
+        "deviceId": "1WMHH811X00447",
+        "name": "com.inkibit.HolonspaceSpring4april",
+        "processId": 27799,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "1WMHH811X00447",
-            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 18524,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHH811X00447",
-            "name": "com.DefaultCompany.MultiplayerURPstarterproject",
-            "processId": 20227,
-            "exited": true
-        },
         {
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
@@ -36,7 +24,7 @@
             "deviceId": "1WMHH811X00447",
             "name": "com.oculus.shellenv",
             "processId": 1916,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1WMHH811X00447",
@@ -48,6 +36,12 @@
             "deviceId": "1WMHH811X00447",
             "name": "com.DefaultCompany.MultiplayerURPstarterproject",
             "processId": 24185,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH811X00447",
+            "name": "com.inkibit.HolonspaceSpring4april",
+            "processId": 27799,
             "exited": false
         },
         {

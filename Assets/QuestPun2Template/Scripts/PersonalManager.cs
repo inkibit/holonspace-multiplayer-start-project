@@ -11,7 +11,8 @@ namespace Networking.Pun2
 {
     public class PersonalManager : MonoBehaviourPunCallbacks
     {
-        public GameObject headPrefab;
+        [HideInInspector] public GameObject headReference;
+        [SerializeField] GameObject headPrefab;
         [SerializeField] GameObject handRPrefab;
         [SerializeField] GameObject handLPrefab;
         [SerializeField] GameObject heartPrefab;
@@ -51,15 +52,15 @@ namespace Networking.Pun2
         private void Start()
         {
             //Instantiate Head
-            GameObject obj = (PhotonNetwork.Instantiate(headPrefab.name, OculusPlayer.instance.head.transform.position, OculusPlayer.instance.head.transform.rotation, 0));
-            obj.GetComponent<SetColor>().SetColorRPC(PhotonNetwork.LocalPlayer.ActorNumber);
+            headReference = (PhotonNetwork.Instantiate(headPrefab.name, OculusPlayer.instance.head.transform.position, OculusPlayer.instance.head.transform.rotation, 0));
+            headReference.GetComponent<SetColor>().SetColorRPC(PhotonNetwork.LocalPlayer.ActorNumber);
 
             //Instantiate heart
             GameObject heart = (PhotonNetwork.Instantiate(heartPrefab.name, OculusPlayer.instance.heart.transform.position, OculusPlayer.instance.heart.transform.rotation, 0));
             heart.GetComponent<SetColor>().SetColorRPC(PhotonNetwork.LocalPlayer.ActorNumber);
 
             //Instantiate right hand
-            obj = (PhotonNetwork.Instantiate(handRPrefab.name, OculusPlayer.instance.rightHand.transform.position, OculusPlayer.instance.rightHand.transform.rotation, 0));
+            GameObject obj = (PhotonNetwork.Instantiate(handRPrefab.name, OculusPlayer.instance.rightHand.transform.position, OculusPlayer.instance.rightHand.transform.rotation, 0));
             for (int i = 0; i < obj.transform.childCount; i++)
             {
                 toolsR.Add(obj.transform.GetChild(i).gameObject);
