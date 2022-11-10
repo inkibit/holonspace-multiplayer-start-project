@@ -1,7 +1,7 @@
 # holonspace-multiplayer-start-project
 
 Starting from a template
-This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, settings configuration and Holoncore. You will then need to install some packages. I'm using Unity version 2020 (LTS)
+This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install some packages. I'm using Unity version 2020 (LTS)
 
 - Clone this repository (I find Github desktop fairly easy) https://desktop.github.com/
 - Add project to Unity Hub (set to Android from Dropdown) https://unity.com/download
@@ -13,8 +13,6 @@ This template comes pre-configured with Universal Render Pipeline (URP), Multipl
 
 
 ## Multiplayer
-- Download Photon Pun 2 and Open in Unity > Import into project https://assetstore.unity.com/packages/tools/network/pun-2-free-119922
-- Download Photon Voice 2 import into project https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518
 
 - Create a new Photon account Pun app in Photon Dashboard https://www.photonengine.com/
 - Copy Photon Pun App ID into the Photon server settings
