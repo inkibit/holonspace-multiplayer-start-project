@@ -129,7 +129,19 @@ MonoBehaviour:
   - {fileID: 7888046409118779773}
   onGrab:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -209,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1008dd11e3b61a941912c450cb01a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioHolon: {fileID: 1271036707166037351, guid: c8f9f3b0f233dce428bad0c39fb697bf, type: 3}
+  audioHolon: {fileID: 8010121392742755625, guid: 75fd43253b209074eb28beee926d6f60, type: 3}
   spawnPoint: {fileID: 4797228214778711559}
 --- !u!1001 &4797228215479254901
 PrefabInstance:

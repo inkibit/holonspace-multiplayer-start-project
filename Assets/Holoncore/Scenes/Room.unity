@@ -242,9 +242,21 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6649897669091911555, guid: a6b0d0a8df1795c41be1ac89871b3e12, type: 3}
+      propertyPath: onGrab.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6649897669091911556, guid: a6b0d0a8df1795c41be1ac89871b3e12, type: 3}
       propertyPath: sceneViewId
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649897669202217260, guid: a6b0d0a8df1795c41be1ac89871b3e12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649897669202217260, guid: a6b0d0a8df1795c41be1ac89871b3e12, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6649897669659757894, guid: a6b0d0a8df1795c41be1ac89871b3e12, type: 3}
       propertyPath: m_Mesh
@@ -1143,6 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d46f6e5c504d47498411f3f59f13c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headReference: {fileID: 0}
   headPrefab: {fileID: 6093847017595412510, guid: 29fcc252b2a3996429269cb9a9644ed3, type: 3}
   handRPrefab: {fileID: 8092473706190187856, guid: db760f35b6a255f4cb3191bd755cbc59, type: 3}
   handLPrefab: {fileID: 2777303377266846524, guid: d9702bb4198465048b5d7b63265bc152, type: 3}
@@ -1552,7 +1565,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68880
+  m_Name: pb_Mesh-1192
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2290,11 +2303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7115111735680423833, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_RenderPostProcessing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7115111735680423833, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7606402661239341842, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_Antialiasing
@@ -2310,7 +2323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606402661239341842, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
-      value: 0
+      value: 1026
       objectReference: {fileID: 0}
     - target: {fileID: 8601279191667616283, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_Dithering
@@ -2326,11 +2339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8601279191667616283, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_RenderPostProcessing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8601279191667616283, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8966468245538663771, guid: cbf37ca8b2ad5b74aabfde0f0ab2e049, type: 3}
       propertyPath: m_LocalScale.x
