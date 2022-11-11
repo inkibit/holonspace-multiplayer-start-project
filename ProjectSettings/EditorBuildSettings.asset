@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Holoncore/Scenes/Lobby.unity
     guid: a0cf70f641ded554a96550a76e513b1d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Holoncore/Scenes/Room.unity
     guid: c2a6d6239126ef545ba41addbeccd081
+  - enabled: 1
+    path: Assets/Holonset-illustrations/Scenes/illustrations-scene.unity
+    guid: 9e556f01a170b8e4daf748c583e61885
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4e53aabfa0bd40e4d81825657ee0a948, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 94ab8ec81e4b8254db8ad2f432bce65a, type: 2}

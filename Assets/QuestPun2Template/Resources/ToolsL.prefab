@@ -131,6 +131,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PunHandL
       objectReference: {fileID: 0}
+    - target: {fileID: 8380115592184778793, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d96f3b8573a975459d94fc19507802d, type: 2}
+    - target: {fileID: 8477489007176547447, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477489007176547447, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477489007176547447, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3733991500251528973, guid: 7780656bb769fed43831fe9831283d72, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7780656bb769fed43831fe9831283d72, type: 3}
