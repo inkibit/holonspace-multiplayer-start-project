@@ -1,8 +1,8 @@
 # holonspace-multiplayer-start-project
 
-This template assumes that you have limited experience with Unity, Oculus and Github but perhaps have tried a little. It will allow you to create a multiplayer Holonspace and build it out to play with other people. Give yourself a couple of hours to do this tutorial.
+This template assumes that you have limited experience with Unity, Oculus and Github but perhaps have tried a little. It will allow you to create a multiplayer Holonspace and build it out to the Meta Quest 2 and play with other people. Give yourself a couple of hours to do this tutorial.
 
-We are using a VR ready PC for this tutorial. You may be able to use a MAC but may have some issues with compatibility. We will be updating a mac version at some point soon. This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install some packages. I'm using Unity version 2020.3.30 which works well. You can try later versions but there may be incompatibilities. I recommend you try this one first. 
+ This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install some packages. I'm using Unity version 2020.3.30 which works well. You can try later versions but there may be incompatibilities. I recommend you try this one first. We are using a VR ready PC for this tutorial.
 
 ## Set up your Quest and Oculus developer account
 - You can follow this handy guide from Adafruit: https://learn.adafruit.com/sideloading-on-oculus-quest/enable-developer-mode
