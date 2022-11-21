@@ -159,7 +159,14 @@ If you haven't already built out to the headset using a link cable then you can 
 - Connect your Quest to the PC using a link cable. 
 - Put on the headset and authorise the various windows that appear - take off headset
 - In Sidequest - check that you have a 'green light' that shows you are connected
-- Install the apk to your headset using icon/link
+
+![image](https://user-images.githubusercontent.com/1101918/203081446-cf95a089-194f-4f69-8e01-852f4d259280.png)
+
+- Install the apk to your headset using icon/link (the folder with down arrow)
+
+![image](https://user-images.githubusercontent.com/1101918/203081847-606605b7-d4e8-4695-bf29-09eda1946185.png)
+
+
 - Check you have no error messages when installing
 - Put the headset back on and navigate to the apps menu
 - Select 'Unknown sources' from the drop down menu on the top right of the apps window
