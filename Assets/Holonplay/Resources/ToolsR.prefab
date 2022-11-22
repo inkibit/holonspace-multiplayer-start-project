@@ -75,6 +75,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8092473706190187857}
     m_Modifications:
+    - target: {fileID: 2441870411499026915, guid: fbf7f0a128c301f47991f84d7c08d93d, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441870411499026915, guid: fbf7f0a128c301f47991f84d7c08d93d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8385319148354950339, guid: fbf7f0a128c301f47991f84d7c08d93d, type: 3}
       propertyPath: viewIdField
       value: 0
