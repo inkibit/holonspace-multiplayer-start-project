@@ -170,6 +170,9 @@ If you haven't already built out to the headset using a link cable then you can 
 - As long as you are connected to the internet, you should see the inkibit connecting screen then you will be in Holonspace. This is your own app version. 
 - Send apk to other people or install to other headsets to play in the same Holonspace. 
 
+##Notes
+- When you reopen the project you might find you get a message about deleting old files. You can safely delete them. 
+
 ###
 Customising Holonspace - You will always need lobby up there as the first screen but the next scene but you can add any new scene next and it will load - as long as you have the scene set up properly for Holonspace to work. If you're not sure, duplicate the room screen from the Holoncore folder and 
 
