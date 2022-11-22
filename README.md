@@ -55,6 +55,7 @@ We'll be using an older version of Oculus Integration package as we know it is c
 - Download v42.0 of the Oculus Integration package https://developer.oculus.com/downloads/package/unity-integration/42.0
 
 - Import into project by going to Assets > Import Package > Custom package then navigate to the downloaded file
+- 
 ![image](https://user-images.githubusercontent.com/1101918/203310662-5bd81ee7-b3e0-442c-86b1-b88d16997a35.png)
 
 - Click **Import** again when you see the list of files (this part can take a while as it's a big package...)
@@ -63,6 +64,7 @@ We'll be using an older version of Oculus Integration package as we know it is c
 - Click **Yes** when prompted to install latest OVR plugin (v1.74)
 
 - Click **Cancel** when asked about using the OpenXR backend. 
+- 
 ![image](https://user-images.githubusercontent.com/1101918/203063121-8ff93af9-7920-4838-8f53-9126d926b863.png)
 - Click **Ok** on next screen.
 - Click **Restart** when prompted.
