@@ -14,7 +14,7 @@ This template assumes that you have limited experience with Unity, Oculus and Gi
 
 - Follow the setup instructions for creating a personal licence
 - Navigate to the installs tab
-- Install version 2020.3.3f1 from the archive of installs
+- Install version 2020.3.30f1 from the archive of installs
 
 ![image](https://user-images.githubusercontent.com/1101918/203075619-af0b8672-f9f2-4a47-b78f-777761a4148e.png)
 
@@ -50,7 +50,7 @@ You'll see a lot of errors in the **Console** panel. That's ok. It's missing Ocu
 
 ![image](https://user-images.githubusercontent.com/1101918/203059965-3edab5d4-4e68-4400-a217-8ea6a2cea6f1.png)
 
-## Install Oculus Integration Unity package
+## Install Oculus Integration SDK Unity package
 We'll be using an older version of Oculus Integration package as we know it is compatible with Holonspace. You can try other versions but it may be unreliable.
 - Download v42.0 of the Oculus Integration package https://developer.oculus.com/downloads/package/unity-integration/42.0
 
@@ -72,7 +72,7 @@ We'll be using an older version of Oculus Integration package as we know it is c
 - Click **Restart** if prompted again - this time it should restart Unity.
 
 ## Checking we have no errors now
-At this point you should be error free - there are some yellow warning messages in your Console which you can clear using the button on the top of the panel. If you have any red warning messages, you'll have to fix those before continuing. It may be a Unity version or computer issue. 
+At this point you might be in a random voice demo scene that Oculus chose for us and see pink objects - that's ok. But you should be error free - there are some yellow warning messages in your Console which you can clear using the button on the top of the panel. If you have any red warning messages, you'll have to fix those before continuing. It may be a Unity version or computer issue. 
 
 ![image](https://user-images.githubusercontent.com/1101918/203064590-5d7b9db7-6220-480a-b0c6-12f78b3cf766.png)
 - Close the packages window if it's still open. 
