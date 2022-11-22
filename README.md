@@ -54,8 +54,6 @@ You'll see a lot of errors in the **Console** panel. That's ok. It's missing Ocu
 We'll be using an older version of Oculus Integration package as we know it is compatible with Holonspace. You can try other versions but it may be unreliable.
 - Download v42.0 of the Oculus Integration package https://developer.oculus.com/downloads/package/unity-integration/42.0
 
-![image](https://user-images.githubusercontent.com/1101918/203057197-dfd3e39d-2e00-4244-8d1b-fbb87d4e85db.png)
-
 - Import into project by going to Assets > Import Package > Custom package then navigate to the downloaded file
 ![image](https://user-images.githubusercontent.com/1101918/203310662-5bd81ee7-b3e0-442c-86b1-b88d16997a35.png)
 
