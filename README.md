@@ -2,7 +2,7 @@
 
 This template assumes that you have limited experience with Unity, Oculus and Github but perhaps have tried a little. It will allow you to create a multiplayer Holonspace and build it out to the Meta Quest 2 and play with other people. Give yourself a couple of hours to do this tutorial.
 
- This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install some packages. I'm using Unity version 2020.3.30 which works well. You can try later versions but there may be incompatibilities. I recommend you try this one first. We are using a VR ready PC for this tutorial.
+ This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install the Oculus Integration SDK version 42 I'm using Unity version 2020.3.30 which works well. You can try later versions but there may be incompatibilities. I recommend you try this one first. We are using a VR ready PC for this tutorial.
 
 ## Set up your Quest and Oculus developer account
 - You can follow this handy guide from Adafruit: https://learn.adafruit.com/sideloading-on-oculus-quest/enable-developer-mode
@@ -50,24 +50,21 @@ You'll see a lot of errors in the **Console** panel. That's ok. It's missing Ocu
 
 ![image](https://user-images.githubusercontent.com/1101918/203059965-3edab5d4-4e68-4400-a217-8ea6a2cea6f1.png)
 
-## Install Oculus
-- Add Oculus Integration to your project via the Unity Asset store: https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022
+## Install Oculus Integration Unity package
+We'll be using an older version of Oculus Integration package as we know it is compatible with Holonspace. You can try other versions but it may be unreliable.
+- Download v42.0 of the Oculus Integration package https://developer.oculus.com/downloads/package/unity-integration/42.0
 
-![image](https://user-images.githubusercontent.com/1101918/203057197-dfd3e39d-2e00-4244-8d1b-fbb87d4e85db.png)
+- Import into project by going to Assets > Import Package > Custom package then navigate to the downloaded file
+- 
+![image](https://user-images.githubusercontent.com/1101918/203310662-5bd81ee7-b3e0-442c-86b1-b88d16997a35.png)
 
-- Import into project via package manager 
-
-![image](https://user-images.githubusercontent.com/1101918/203057026-c901613a-e895-4bb9-9e8c-7931343b2065.png)
-- You'll need to look for 'Oculus Integration' in the 'My Assets' section in the drop-down at the top of the window.
-
-![image](https://user-images.githubusercontent.com/1101918/203060401-e1904677-7d28-47ed-8f49-25aa0fc1e445.png)
 - Click **Import** again when you see the list of files (this part can take a while as it's a big package...)
 
 ![image](https://user-images.githubusercontent.com/1101918/203061168-caf4dfaa-c887-4439-90a7-c0788c7c674b.png)
-- Click **Yes** when prompted to install latest OVR plugin
+- Click **Yes** when prompted to install latest OVR plugin (v1.74)
 
-![image](https://user-images.githubusercontent.com/1101918/203062934-6076732e-12b0-448d-b05a-3e80517ecea1.png)
 - Click **Cancel** when asked about using the OpenXR backend. 
+- 
 ![image](https://user-images.githubusercontent.com/1101918/203063121-8ff93af9-7920-4838-8f53-9126d926b863.png)
 - Click **Ok** on next screen.
 - Click **Restart** when prompted.
@@ -172,6 +169,9 @@ If you haven't already built out to the headset using a link cable then you can 
 - Select 'Unknown sources' from the drop down menu on the top right of the apps window
 - As long as you are connected to the internet, you should see the inkibit connecting screen then you will be in Holonspace. This is your own app version. 
 - Send apk to other people or install to other headsets to play in the same Holonspace. 
+
+##Notes
+- When you reopen the project you might find you get a message about deleting old files. You can safely delete them. 
 
 ###
 Customising Holonspace - You will always need lobby up there as the first screen but the next scene but you can add any new scene next and it will load - as long as you have the scene set up properly for Holonspace to work. If you're not sure, duplicate the room screen from the Holoncore folder and 
