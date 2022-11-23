@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1538889431066158915}
+  - {fileID: 2877385916306138244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,9 +124,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3733991500251528972, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733991500251528972, guid: 7780656bb769fed43831fe9831283d72, type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 2555275924674606308}
+      objectReference: {fileID: 0}
     - target: {fileID: 3733991500251528974, guid: 7780656bb769fed43831fe9831283d72, type: 3}
       propertyPath: m_Name
       value: PunHandL
@@ -134,46 +138,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3733991500251528973, guid: 7780656bb769fed43831fe9831283d72, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7780656bb769fed43831fe9831283d72, type: 3}
---- !u!1 &1538889431066158918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3733991500251528974, guid: 7780656bb769fed43831fe9831283d72, type: 3}
-  m_PrefabInstance: {fileID: 2777303376832813128}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1538889431066158915 stripped
+--- !u!4 &2877385916306138244 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3733991500251528971, guid: 7780656bb769fed43831fe9831283d72, type: 3}
+  m_CorrespondingSourceObject: {fileID: -9123042106707837748, guid: 7780656bb769fed43831fe9831283d72, type: 3}
   m_PrefabInstance: {fileID: 2777303376832813128}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2555275924674606308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538889431066158918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 9
-    InterpolateOption: 2
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 1
-    ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-  m_RotationModel:
-    SynchronizeEnabled: 1
-    InterpolateOption: 2
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 9
-  m_ScaleModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
