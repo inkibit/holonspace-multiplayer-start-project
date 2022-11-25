@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: inkibit
-  productName: Holonspace twosday 22-11-02
+  productName: Holonspace Nov-25
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -219,6 +219,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 6687860010035693007, guid: 94ab8ec81e4b8254db8ad2f432bce65a, type: 2}
+  - {fileID: 11400000, guid: 4e53aabfa0bd40e4d81825657ee0a948, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -236,7 +238,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.inkibit.Holonspacetwosday221102
+    Android: com.inkibit.HolonspaceNov25
     Standalone: com.DefaultCompany.MultiplayerURPstarterproject
   buildNumber:
     Standalone: 0
