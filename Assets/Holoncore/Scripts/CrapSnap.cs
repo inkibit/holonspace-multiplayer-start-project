@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class CrapSnap : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // The OVRGrabbable component attached to the object
+    private OVRGrabbable grabbable;
 
-    public int snapRotationAngle = 45;
+    // The degrees to which the object should snap when grabbed
+    public float snapDegrees = 45f;
+
     void Start()
     {
-        
+        // Get the OVRGrabbable component attached to the object
+        grabbable = GetComponent<OVRGrabbable>();
     }
 
-    static float RoundTo(float val, int snapRotationAngle)
-    {
-        val /= snapRotationAngle;
-        val = Mathf.Round(val);
-        val *= snapRotationAngle;
-        return val;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        var rot = transform.rotation;
-        var angles = rot.eulerAngles;
-        angles = new Vector3(RoundTo(angles.x, snapRotationAngle), RoundTo(angles.y, snapRotationAngle), RoundTo(angles.z, snapRotationAngle));
-        rot.eulerAngles = angles;
-        transform.rotation = rot;
+        // If the object is currently being grabbed
+        if (grabbable.isGrabbed)
+        {
+            // Get the current rotation of the object
+            Quaternion currentRotation = transform.rotation;
+
+            // Calculate the snapped rotation by rounding the current rotation to the nearest snapDegrees value
+            Quaternion snappedRotation = Quaternion.Euler(
+                Mathf.Round(currentRotation.eulerAngles.x / snapDegrees) * snapDegrees,
+                Mathf.Round(currentRotation.eulerAngles.y / snapDegrees) * snapDegrees,
+                Mathf.Round(currentRotation.eulerAngles.z / snapDegrees) * snapDegrees
+            );
+
+            // Set the rotation of the object to the snapped rotation
+            transform.rotation = snappedRotation;
+        }
     }
 }
