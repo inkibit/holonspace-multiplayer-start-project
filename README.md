@@ -4,6 +4,8 @@ This template assumes that you have limited experience with Unity, Oculus and Gi
 
  This template comes pre-configured with Universal Render Pipeline (URP), Multiplayer Quest Template, Photon Pun2 and Photon voice 2, settings configuration and Holoncore. You will then need to install the Oculus Integration SDK version 42 I'm using Unity version 2020.3.30 which works well. You can try later versions but there may be incompatibilities. I recommend you try this one first. We are using a VR ready PC for this tutorial.
 
+ You can see an example of Holonspace. https://www.youtube.com/watch?v=QFidMJlttQ0
+
 ## Set up your Quest and Oculus developer account
 - You can follow this handy guide from Adafruit: https://learn.adafruit.com/sideloading-on-oculus-quest/enable-developer-mode
 
